@@ -5,15 +5,9 @@ import re
 import socket
 from concurrent.futures import ThreadPoolExecutor
 
-# --- НАСТРОЙКИ ---
-# ISO-коды стран, которые скачиваем (в нижнем регистре)
 TARGET_COUNTRIES = ["nl", "de", "us"]
-
-# Шаблон URL источника
 BASE_URL = "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/countries/{country_code}.yaml"
-
-# Таймаут проверки порта в секундах (1.5 сек достаточно, чтобы отсеять "мертвые" сервера)
-PING_TIMEOUT = 1.5
+PING_TIMEOUT = 3.0
 
 def get_flag_emoji(country_code: str) -> str:
     code = country_code.upper()
@@ -33,20 +27,17 @@ def download_country_yaml(country_code: str) -> dict | None:
     return None
 
 def is_node_alive(proxy: dict) -> bool:
-    """Быстрая проверка доступности TCP-порта сервера."""
     server = proxy.get("server")
     port = proxy.get("port")
     if not server or not port:
         return False
     try:
-        port = int(port)
-        with socket.create_connection((server, port), timeout=PING_TIMEOUT):
+        with socket.create_connection((server, int(port)), timeout=PING_TIMEOUT):
             return True
     except Exception:
         return False
 
 def check_proxy_worker(proxy: dict) -> dict | None:
-    """Воркер для параллельной проверки."""
     if is_node_alive(proxy):
         return proxy
     return None
@@ -54,7 +45,6 @@ def check_proxy_worker(proxy: dict) -> dict | None:
 def main():
     raw_proxies = []
 
-    # 1. Скачиваем конфиги нужных стран
     for code in TARGET_COUNTRIES:
         data = download_country_yaml(code)
         if not data or "proxies" not in data or not data["proxies"]:
@@ -62,46 +52,40 @@ def main():
         
         flag = get_flag_emoji(code)
         for p in data["proxies"]:
-            # Сохраняем метку страны для формирования красивого имени
             p["_country_code"] = code.upper()
             p["_flag"] = flag
             raw_proxies.append(p)
 
     if not raw_proxies:
-        print("Ошибка: Не удалось загрузить ни одного прокси!")
+        print(" Ошибка: Не удалось загрузить прокси из источника!")
         return
 
-    print(f"\nВсего скачано узлов: {len(raw_proxies)}. Удаляем дубликаты и проверяем доступность...")
-
-    # 2. Удаление дубликатов по комбинации (server + port + cipher/type)
+    # Удаление дубликатов
     unique_proxies = []
     seen_endpoints = set()
-
     for p in raw_proxies:
         endpoint = (p.get("server"), p.get("port"), p.get("type"))
-        if endpoint in seen_endpoints:
-            continue
-        seen_endpoints.add(endpoint)
-        unique_proxies.append(p)
+        if endpoint not in seen_endpoints:
+            seen_endpoints.add(endpoint)
+            unique_proxies.append(p)
 
-    print(f"После удаления дубликатов осталось: {len(unique_proxies)}")
-    print("Проверка пинга (TCP connect)... Это займет пару секунд.")
+    print(f"Скачано уникальных узлов: {len(unique_proxies)}. Проверяем доступность...")
 
-    # 3. Параллельная проверка доступности портов
+    # Проверка пинга
     alive_proxies = []
-    with ThreadPoolExecutor(max_workers=30) as executor:
+    with ThreadPoolExecutor(max_workers=20) as executor:
         results = executor.map(check_proxy_worker, unique_proxies)
         for res in results:
             if res:
                 alive_proxies.append(res)
 
-    print(f" Живых узлов (порт открыт): {len(alive_proxies)} из {len(unique_proxies)}")
-
+    # Защита: если по TCP никто не ответил, берем первые 20 узлов
     if not alive_proxies:
-        print("Ошибка: Все узлы оказались неактивны.")
-        return
+        print(" Ни один узел не ответил на TCP-чек. Берем список без отсева.")
+        alive_proxies = unique_proxies[:20]
 
-    # 4. Формирование чистых и уникальных имен
+    print(f"Формируем файл из {len(alive_proxies)} узлов...")
+
     final_proxies = []
     proxy_names = []
 
@@ -112,14 +96,12 @@ def main():
         original_name = p.get("name", "")
         clean_name = re.sub(r'^[\U0001F1E6-\U0001F1FF]{2}\s*', '', original_name)
         
-        # Нумеруем узлы для гарантированной уникальности имен в Clash
         new_name = f"{flag} {code} - Node {idx}"
         p["name"] = new_name
         
         final_proxies.append(p)
         proxy_names.append(new_name)
 
-    # 5. Сборка итогового файла
     final_config = {
         "port": 7890,
         "socks-port": 7891,
@@ -153,7 +135,7 @@ def main():
     with open(output_filename, "w", encoding="utf-8") as f:
         yaml.dump(final_config, f, allow_unicode=True, sort_keys=False)
 
-    print(f"\n[УСПЕХ] Готово! Сохранен чистый файл '{output_filename}' ({len(final_proxies)} рабочих узлов).")
+    print(f"[УСПЕХ] Файл '{output_filename}' успешно сохранен!")
 
 if __name__ == "__main__":
     main()
