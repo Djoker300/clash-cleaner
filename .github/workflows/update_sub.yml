@@ -2,9 +2,12 @@ name: Auto Update Clash Subscription
 
 on:
   schedule:
-    # Автозапуск каждые 12 часов (в 00:00 и 12:00 UTC)
     - cron: '0 0,12 * * *'
-  workflow_dispatch: # Позволяет запускать процесс вручную через кнопку на GitHub
+  workflow_dispatch:
+
+# Явно задаем права боту на запись содержимого в репозиторий
+permissions:
+  contents: write
 
 jobs:
   update-subscription:
@@ -28,9 +31,14 @@ jobs:
         run: |
           python cleaner.py
 
-      - name: Сохранение обновленного config.yaml в репозиторий
+      - name: Сохранение и отправка изменений
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add config.yaml
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update cleaned subscription" && git push)
+          if git diff --staged --quiet; then
+            echo "Изменений нет, коммит не требуется."
+          else
+            git commit -m "Auto-update cleaned subscription"
+            git push
+          fi
