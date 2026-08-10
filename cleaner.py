@@ -189,7 +189,7 @@ def main():
         ]
     }
 
-    output_filename = "config.yaml"
+    output_filename = "clash-filtered.yaml"
     with open(output_filename, "w", encoding="utf-8") as f:
         yaml.dump(final_config, f, allow_unicode=True, sort_keys=False)
 
@@ -199,7 +199,7 @@ def main():
     print(f"• Исходно узлов:           {total_downloaded}")
     print(f"• Отсеяно дублей:          {duplicates_removed}")
     print(f"• Не ответили на TCP:      {dead_nodes}")
-    print(f"• Сохранено в config.yaml: {len(final_proxies)} узлов")
+    print(f"• Сохранено в {output_filename}: {len(final_proxies)} узлов")
     print(f"\n[УСПЕХ] Файл '{output_filename}' обновлен!")
 
 if __name__ == "__main__":
