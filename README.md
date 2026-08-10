@@ -1,3 +1,6 @@
 # clash-cleaner
 
-Ссылка на raw: https://raw.githubusercontent.com/Djoker300/clash-cleaner/refs/heads/main/clash-filtered.yaml
+### Ссылка для Clash / FlClash:
+
+```text
+[https://raw.githubusercontent.com/Djoker300/clash-cleaner/refs/heads/main/clash-filtered.yaml](https://raw.githubusercontent.com/Djoker300/clash-cleaner/refs/heads/main/clash-filtered.yaml)
