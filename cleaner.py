@@ -179,7 +179,7 @@ def main():
                 "type": "url-test",
                 "url": "http://www.gstatic.com/generate_204",
                 "interval": 300,
-                "tolerance": 50,
+                "tolerance": 100,
                 "proxies": proxy_names
             }
         ],
