@@ -5,16 +5,172 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: 🇫🇷 FR - trojan 1
-  password: 00954640-916f-48d8-aa9a-baee2d828d0e
-  port: 24421
-  server: fr1us9.stableq.top
+- flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 1
+  network: tcp
+  port: 443
+  server: fr213.mechvpn.online
+  servername: ''
   skip-cert-verify: false
-  sni: ''
-  type: trojan
+  tls: true
+  type: vless
   udp: true
-- client-fingerprint: chrome
+  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+- flow: xtls-rprx-vision
   name: 🇫🇷 FR - vless 2
+  network: tcp
+  port: 443
+  server: fr186.mechvpn.online
+  servername: ''
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 3
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: gPTBA-gVUWAK9yziB_v_sGSncm0LwBQvEAsTQZK4jEE
+    short-id: 5a8e1a04f3d92b67
+  server: 2.26.129.247
+  servername: ukrop.mycdn-me.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: a5eddeef-737a-4126-8d1e-527f85d7ed18
+- client-fingerprint: qq
+  name: 🇫🇷 FR - vless 4
+  network: tcp
+  port: 6800
+  reality-opts:
+    public-key: lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo
+    short-id: ''
+  server: france.zestmarket.ir
+  servername: play.google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7595cd50-9326-48e4-a7bc-802e85e643ec
+- flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 5
+  network: tcp
+  port: 443
+  server: fr76.mechvpn.online
+  servername: fr76.mechvpn.online
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 6
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
+    short-id: bbc68cec8bb8d2e3
+  server: node21.mxvpn.dev
+  servername: node21.mxvpn.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 7
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: gPTBA-gVUWAK9yziB_v_sGSncm0LwBQvEAsTQZK4jEE
+    short-id: 5a8e1a04f3d92b67
+  server: 2.26.129.67
+  servername: ukrop.mycdn-me.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: bda0ede7-ef0a-4fbc-b3b6-1205e55ffb48
+- flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 8
+  network: tcp
+  port: 443
+  server: fr143.mechvpn.online
+  servername: ''
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+- flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 9
+  network: tcp
+  port: 443
+  server: 91.239.208.213
+  servername: fr213.mechvpn.online
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+- flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 10
+  network: tcp
+  port: 443
+  server: fr15.mechvpn.online
+  servername: ''
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+- flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 11
+  network: tcp
+  port: 443
+  server: nasnet-162191099-direct.mbghalibaf.com
+  servername: ''
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
+- flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 12
+  network: tcp
+  port: 443
+  server: 162.19.10.99
+  servername: nasnet-162191099-direct.mbghalibaf.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
+- name: 🇫🇷 FR - vless 13
+  network: ws
+  port: 443
+  server: bab-6.site
+  servername: bab-6.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
+- flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 14
+  network: tcp
+  port: 443
+  server: fr90.mechvpn.online
+  servername: ''
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+- client-fingerprint: firefox
+  name: 🇫🇷 FR - vless 15
   network: tcp
   port: 443
   reality-opts:
@@ -27,584 +183,90 @@ proxies:
   udp: true
   uuid: af348651-1624-4710-b55f-0307a22d891f
 - flow: xtls-rprx-vision
-  name: 🇫🇷 FR - vless 3
+  name: 🇫🇷 FR - vless 16
   network: tcp
   port: 443
-  server: fr186.mechvpn.online
-  servername: fr186.mechvpn.online
+  server: fr198.mechvpn.online
+  servername: fr198.mechvpn.online
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-- name: 🇫🇷 FR - hysteria2 4
-  password: 95e8532b-cc69-42d4-9553-e3c23292b15b
-  port: 8443
-  server: iq5ny.pleiades.codes
-  skip-cert-verify: true
-  sni: iq5ny.pleiades.codes
-  type: hysteria2
-- name: 🇫🇷 FR - hysteria2 5
-  password: 95e8532b-cc69-42d4-9553-e3c23292b15b
-  port: 8443
-  server: 151.247.193.5
-  skip-cert-verify: true
-  sni: iq5ny.pleiades.codes
-  type: hysteria2
-- name: 🇫🇷 FR - hysteria2 6
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 17
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: UjwVdSvY-6dV5UKCNO7ROokiSF_aLaXYyUaG6RybOmI
+    short-id: 2762604ed2e0fa2f
+  server: 185.193.89.47
+  servername: xfr.saturn-cloud.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: 95ae0de8-d944-4b1e-b450-d34d80f9a528
+- client-fingerprint: firefox
+  name: 🇫🇷 FR - vless 18
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: 6j7SZO4StX_8QkHX9sATJug5nQ4X4XoTj_6B7bClEw4
+    short-id: e52e7fd8585ac5c1
+  server: 51.77.217.70
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: ab00e12c-09f1-41c6-8d60-7c6a83f5ca9d
+- name: 🇫🇷 FR - vless 19
+  network: ws
+  port: 443
+  server: 8.6.112.6
+  servername: lucxi.lightorbitlab-kiloilm.sbs
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 49e76398-5127-4005-90cb-c2a971f745f1
+- name: 🇫🇷 FR - hysteria2 20
   password: dongtaiwang.com
   port: 22000
   server: 62.210.124.146
   skip-cert-verify: true
   sni: www.microsoft.com
   type: hysteria2
-- name: 🇫🇷 FR - hysteria2 7
-  password: gf1:gfhysteria2024
-  port: 443
-  server: 173.212.201.85
+- name: 🇫🇷 FR - hysteria2 21
+  password: 95e8532b-cc69-42d4-9553-e3c23292b15b
+  port: 8443
+  server: iq5ny.pleiades.codes
   skip-cert-verify: true
-  sni: www.docker.com
+  sni: ''
   type: hysteria2
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷 FR - ss 8
-  password: pFNN9jKe8jwD
-  port: 32245
-  server: 38.180.92.242
-  type: ss
-  udp: true
-- name: 🇫🇷 FR - trojan 9
-  password: AE62539071
-  port: 443
-  server: distinct-quail.rooster465.autos
-  skip-cert-verify: false
-  sni: ''
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 10
-  password: humanity
-  port: 443
-  server: 104.16.7.70
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 11
-  password: ND91608427
-  port: 443
-  server: fancy-skink.rooster465.autos
-  skip-cert-verify: true
-  sni: fancy-skink.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 12
-  password: humanity
-  port: 443
-  server: www.calmlunch.com
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 13
-  password: humanity
-  port: 443
-  server: 45.130.125.75
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 14
-  password: humanity
-  port: 443
-  server: 104.19.229.21
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 15
-  password: humanity
-  port: 443
-  server: 188.114.98.0
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 16
-  password: humanity
-  port: 443
-  server: 198.62.62.23
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 17
-  password: humanity
-  port: 443
-  server: 104.17.121.71
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 18
-  password: AE62539071
-  port: 443
-  server: tough-hermit.rooster465.autos
-  skip-cert-verify: false
-  sni: ''
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 19
-  password: humanity
-  port: 443
-  server: 172.64.152.23
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 20
-  password: humanity
-  port: 443
-  server: 104.18.8.83
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 21
-  password: humanity
-  port: 443
-  server: 104.18.9.83
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 22
-  password: humanity
-  port: 443
-  server: 212.183.88.136
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 23
-  password: humanity
-  port: 443
-  server: 188.114.96.3
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 24
-  password: humanity
-  port: 443
-  server: 165.215.250.14
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 25
-  password: humanity
-  port: 443
-  server: 104.18.28.234
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 26
-  password: humanity
-  port: 443
-  server: 104.17.121.9
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 27
-  password: humanity
-  port: 443
-  server: 45.130.125.76
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 28
-  password: humanity
-  port: 443
-  server: 104.18.12.149
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 29
-  password: humanity
-  port: 443
-  server: 45.130.125.69
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 30
-  password: ND91608427
-  port: 443
-  server: classic-gator.rooster465.autos
-  skip-cert-verify: false
-  sni: ''
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 31
-  password: ND91608427
-  port: 443
-  server: 15.237.137.197
-  skip-cert-verify: true
-  sni: fancy-skink.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 32
-  password: humanity
-  port: 443
-  server: 45.130.125.190
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 33
-  password: QV31589740
-  port: 443
-  server: 51.44.160.58
-  skip-cert-verify: false
-  sni: great-krill.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 34
-  password: humanity
-  port: 443
-  server: 104.18.32.47
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 35
-  password: QV31589740
-  port: 443
-  server: great-krill.rooster465.autos
-  skip-cert-verify: false
-  sni: ''
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 36
-  password: 00954640-916f-48d8-aa9a-baee2d828d0e
-  port: 24413
-  server: fr1us9.stableq.top
-  skip-cert-verify: false
-  sni: ''
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 37
-  password: humanity
-  port: 443
-  server: 185.18.250.245
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 38
-  password: ND91608427
-  port: 443
-  server: 13.36.175.151
-  skip-cert-verify: true
-  sni: classic-gator.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 39
-  password: humanity
-  port: 443
-  server: 185.18.250.252
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 40
-  password: ND91608427
-  port: 443
-  server: fr1.levikogjgfdd.ir
-  skip-cert-verify: false
-  sni: classic-gator.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 41
-  password: humanity
-  port: 443
-  server: 45.133.117.185
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 42
-  password: AE62539071
-  port: 443
-  server: chief-cricket.rooster465.autos
-  skip-cert-verify: false
-  sni: ''
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 43
-  password: humanity
-  port: 8443
-  server: 194.147.33.102
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 44
-  password: humanity
-  port: 2053
-  server: fr2.levikogjgfdd.ir
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 45
-  password: humanity
-  port: 443
-  server: 194.135.38.140
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 46
-  password: humanity
-  port: 2053
-  server: 89.150.34.41
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 47
-  password: humanity
-  port: 8443
-  server: 185.164.163.173
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 48
-  password: humanity
-  port: 2053
-  server: 212.118.52.236
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 49
-  password: humanity
-  port: 443
-  server: 185.225.68.232
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 50
-  password: humanity
-  port: 443
-  server: 45.87.41.18
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 51
-  password: humanity
-  port: 443
-  server: 84.21.172.81
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- name: 🇫🇷 FR - trojan 52
-  password: humanity
-  port: 443
-  server: 193.239.160.134
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪 DE - ss 53
-  password: OWVhYWM4OTFlNGFhNTFiNjY5NDNlODI3ZDE5Njc0ZmE=
-  port: 59924
-  server: 130.61.40.253
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪 DE - ss 54
-  password: Pvd++2Ws09rx6RKUtcUfpBPVVEY0AiKT7PvFn/Y/ngs=
-  port: 16156
-  server: e4.cover20.ir
-  type: ss
-  udp: true
-- name: 🇩🇪 DE - vless 55
-  network: tcp
-  port: 22224
-  server: 63.183.73.255
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇩🇪 DE - vless 56
-  network: tcp
-  port: 22222
-  server: 52.59.99.227
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇩🇪 DE - vless 57
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: O2ttHpVFmwoAf-E1rHgOlv7NggcwxcWkHHen7jkIBjY
-    short-id: a368b80ef68dd678
-  server: gm10.mcqueenconnection.ru
-  servername: gm10.mcqueenconnection.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 176bc48c-460b-4260-abbd-68fd5ea85270
-- name: 🇩🇪 DE - vless 58
-  network: tcp
-  port: 22224
-  server: 52.59.99.227
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇩🇪 DE - vless 59
-  network: tcp
-  port: 22223
-  server: 63.183.73.255
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇩🇪 DE - vless 60
-  network: tcp
-  port: 22222
-  server: 63.183.73.255
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇩🇪 DE - vless 61
-  network: tcp
-  port: 22223
-  server: 52.59.99.227
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🇩🇪 DE - trojan 62
-  password: AE62539071
-  port: 443
-  server: teaching-gnu.rooster465.autos
-  skip-cert-verify: false
-  sni: teaching-gnu.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇩🇪 DE - trojan 63
-  password: AE62539071
-  port: 443
-  server: moved-bluegill.rooster465.autos
-  skip-cert-verify: false
-  sni: moved-bluegill.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇩🇪 DE - trojan 64
-  password: AE62539071
-  port: 443
-  server: 3.79.7.150
-  skip-cert-verify: false
-  sni: moved-bluegill.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇩🇪 DE - trojan 65
-  password: AE62539071
-  port: 443
-  server: up-dinosaur.rooster465.autos
-  skip-cert-verify: false
-  sni: up-dinosaur.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇩🇪 DE - trojan 66
-  password: AE62539071
-  port: 443
-  server: 18.198.1.232
-  skip-cert-verify: false
-  sni: teaching-gnu.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: qq
-  name: 🇩🇪 DE - vless 67
-  network: grpc
-  port: 9879
-  reality-opts:
-    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-    short-id: ''
-  server: 176.108.252.108
-  servername: dl.google.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 130e6aab-9eba-441e-9021-22cbccc72832
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇩🇪 DE - vless 68
-  network: tcp
-  port: 51629
-  reality-opts:
-    public-key: k89H-2EgOKgvOaLGXtLEbWI5YRjzoIfoDeRVXawIIBM
-    short-id: 398cd7a9beed4aa2
-  server: gh2.plasdomain.ir
-  servername: www.icloud.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1383b196-133f-4486-a64d-8a3ab3a2e1da
-- client-fingerprint: qq
-  name: 🇩🇪 DE - vless 69
-  network: tcp
-  port: 6800
-  reality-opts:
-    public-key: lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo
-    short-id: ''
-  server: 162.19.156.14
-  servername: play.google.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7595cd50-9326-48e4-a7bc-802e85e643ec
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇩🇪 DE - vless 70
+  name: 🇫🇷 FR - vless 22
   network: tcp
   port: 443
   reality-opts:
     public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
     short-id: bbc68cec8bb8d2e3
-  server: node20.mxvpn.dev
-  servername: node20.mxvpn.dev
+  server: 81.19.137.181
+  servername: node21.mxvpn.dev
   tls: true
   type: vless
   udp: true
   uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
-- name: 🇩🇪 DE - trojan 71
-  password: AE62539071
-  port: 443
-  server: 3.120.138.119
-  skip-cert-verify: false
-  sni: up-dinosaur.rooster465.autos
-  type: trojan
-  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇩🇪 DE - vless 72
-  network: tcp#🎗️96@oneclickvpnkeysvless://cd74b633-51fd-41d2-a23c-806ab08e2916@95.163.232.183:443?encryption=none
+  name: 🇫🇷 FR - vless 23
+  network: tcp
   port: 2053
   reality-opts:
-    public-key: E6u2RbffXIPvia5v5iIZVj6U_VpSBWmGTsHHNtH-5Rg
-    short-id: 417063feab794131
-  server: de3.neobo-tooth.ru
+    public-key: dRLd_E_GYCkCcwxLN5EcRQYsREKqisb26_ZSehxUpWY
+    short-id: 1eb8ea8dae937ae0
+  server: 45.144.28.39
   servername: vk.ru
   tls: true
   type: vless
@@ -612,7 +274,183 @@ proxies:
   uuid: b6c29ae7-4748-4049-b642-b695c0d2c776
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇩🇪 DE - vless 73
+  name: 🇫🇷 FR - vless 24
+  network: tcp
+  port: 42287
+  reality-opts:
+    public-key: TeQRou69R4O0YCR0b28I3PF97W9zc3Qf-zUvlOZA43M
+    short-id: 946e4c05cc69e1
+  server: 15.237.122.88
+  servername: yahoo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1fe3eba8-86ef-4bce-9fb4-c7517954b2e2
+- name: 🇫🇷 FR - vless 25
+  network: ws
+  port: 443
+  server: finite-node.rtxconfigz.com
+  servername: finite-node.rtxconfigz.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 25f3beef-a4b6-40bc-aa74-17a0f89f683c
+- flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 26
+  network: tcp
+  port: 443
+  server: fr199.mechvpn.online
+  servername: ''
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+- name: 🇫🇷 FR - trojan 27
+  password: QV31589740
+  port: 443
+  server: great-krill.rooster465.autos
+  skip-cert-verify: false
+  sni: ''
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 28
+  network: tcp
+  port: 50443
+  reality-opts:
+    public-key: hp9ht_jsxocTnQEbChb1G3JoDF50x-xDT8UYr66D1TQ
+    short-id: ''
+  server: 89.208.113.54
+  servername: www.icloud.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 000f16e8-cc68-4951-b336-acd81996efde
+- name: 🇫🇷 FR - vless 29
+  network: ws
+  port: 443
+  server: 149.202.58.99
+  servername: bab-6.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
+- name: 🇫🇷 FR - vless 30
+  network: ws
+  port: 443
+  server: 104.17.135.117
+  servername: nmrgf.minipixelbox-nexoim.sbs
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 49e76398-5127-4005-90cb-c2a971f745f1
+- flow: xtls-rprx-vision
+  name: 🇫🇷 FR - vless 31
+  network: tcp
+  port: 443
+  server: 212.69.86.187
+  servername: cdn.intercom-home.online
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7e760d89-a8f4-4a87-8f10-b4af28c61b7f
+- name: 🇫🇷 FR - trojan 32
+  password: AE62539071
+  port: 443
+  server: distinct-quail.rooster465.autos
+  skip-cert-verify: false
+  sni: ''
+  type: trojan
+  udp: true
+- name: 🇫🇷 FR - trojan 33
+  password: AE62539071
+  port: 443
+  server: tough-hermit.rooster465.autos
+  skip-cert-verify: false
+  sni: ''
+  type: trojan
+  udp: true
+- name: 🇫🇷 FR - trojan 34
+  password: AE62539071
+  port: 443
+  server: one-quail.rooster465.autos
+  skip-cert-verify: true
+  sni: one-quail.rooster465.autos
+  type: trojan
+  udp: true
+- name: 🇫🇷 FR - trojan 35
+  password: QV31589740
+  port: 443
+  server: 51.44.160.58
+  skip-cert-verify: false
+  sni: great-krill.rooster465.autos
+  type: trojan
+  udp: true
+- name: 🇫🇷 FR - trojan 36
+  password: ND91608427
+  port: 443
+  server: fancy-skink.rooster465.autos
+  skip-cert-verify: false
+  sni: fancy-skink.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 37
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: kaw2U8L2ZTcgo56qUBONfylYJpHprI_CgZfv1I4q2Sc
+    short-id: b512d49930874a31
+  server: 185.126.67.76
+  servername: cdn-de-4.ai-apiroute.cc
+  tls: true
+  type: vless
+  udp: true
+  uuid: b6f3b292-00c9-430e-bc4c-b1294bd895c0
+- name: 🇩🇪 DE - vless 38
+  network: tcp
+  port: 9999
+  server: freetg.strettenvpn.com
+  type: vless
+  udp: true
+  uuid: f83d8e60-f039-45c8-95d2-2a44c59025f6
+- name: 🇩🇪 DE - vless 39
+  network: tcp
+  port: 22222
+  server: 63.186.212.143
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇩🇪 DE - vless 40
+  network: ws
+  port: 2096
+  server: de-193-58.neobo-tooth.ru
+  type: vless
+  udp: true
+  uuid: b6c29ae7-4748-4049-b642-b695c0d2c776
+- client-fingerprint: firefox
+  name: 🇩🇪 DE - vless 41
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: EDeWEPBq0QDOPp73PNVlaV2EWaEBWhgBcNy3MROgZ00
+    short-id: 04b38b6b152a1b0b
+  server: 144.31.87.16
+  servername: pinterest.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: c40f773e-3b96-417e-b22c-e48cb63ca7d9
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 42
   network: tcp
   port: 443
   reality-opts:
@@ -624,78 +462,756 @@ proxies:
   type: vless
   udp: true
   uuid: 176bc48c-460b-4260-abbd-68fd5ea85270
-- name: 🇩🇪 DE - hysteria2 74
-  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-  port: 443
-  server: 91.196.32.163
-  skip-cert-verify: true
-  sni: germany3.h2corp.local
-  type: hysteria2
-- cipher: aes-256-cfb
-  name: 🇩🇪 DE - ss 75
-  password: amazonskr05
-  port: 443
-  server: 18.199.102.146
-  type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 DE - vmess 43
+  network: raw
+  port: 38998
+  server: 178.83.45.29
+  type: vmess
   udp: true
-- cipher: aes-256-cfb
-  name: 🇩🇪 DE - ss 76
-  password: amazonskr05
+  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 44
+  network: tcp
   port: 443
-  server: 51.102.205.132
-  type: ss
+  reality-opts:
+    public-key: -MBD9e0bXy_fd10JLqHW8A5b8tSy_OuHvNDRaOhL2FU
+    short-id: b4cf04
+  server: 144.31.106.22
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
   udp: true
-- cipher: aes-256-cfb
-  name: 🇩🇪 DE - ss 77
-  password: amazonskr05
+  uuid: 6981a67d-fe1e-48c6-b7f0-53a86a14da0d
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 45
+  network: tcp
   port: 443
-  server: 3.66.86.250
-  type: ss
+  reality-opts:
+    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
+    short-id: bbc68cec8bb8d2e3
+  server: 77.239.123.224
+  servername: node20.mxvpn.dev
+  tls: true
+  type: vless
   udp: true
+  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 46
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk
+    short-id: ff776ff77be48b88
+  server: germ2.freeinternat.com
+  servername: germ2.freeinternat.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: fbb74aa8-b89a-4f20-9504-6b25aadf6681
+- client-fingerprint: chrome
+  name: 🇩🇪 DE - vless 47
+  network: grpc
+  port: 2096
+  reality-opts:
+    public-key: HdIk7jX58DtK-PGVKoU587O4w1KrDiej1qz8J2SmRA8
+    short-id: a7bf40db1b0e566a
+  server: 144.31.87.16
+  servername: www.ya.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: c40f773e-3b96-417e-b22c-e48cb63ca7d9
+- name: 🇩🇪 DE - vless 48
+  network: tcp
+  port: 9999
+  server: 217.60.99.49
+  type: vless
+  udp: true
+  uuid: f83d8e60-f039-45c8-95d2-2a44c59025f6
+- flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 49
+  network: tcp
+  port: 443
+  server: 94.183.219.145
+  servername: de15.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 551955b3-46e9-5129-95c9-e7474c15ed6b
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 50
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 09O8bAlIWm9AGnNyxBtHwpYNQxlXPSQeQeKzS3ZMwGE
+    short-id: a1f9c0e21d7b6485
+  server: 2.26.135.194
+  servername: smorodina.mycdn-me.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: bda0ede7-ef0a-4fbc-b3b6-1205e55ffb48
+- client-fingerprint: qq
+  name: 🇩🇪 DE - vless 51
+  network: grpc
+  port: 9899
+  reality-opts:
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+    short-id: aa
+  server: 176.109.108.196
+  servername: dl.google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 14777bd9-56a5-46f6-a94f-826b4800dc05
+- client-fingerprint: qq
+  name: 🇩🇪 DE - vless 52
+  network: grpc
+  port: 9830
+  reality-opts:
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+    short-id: aabb
+  server: 176.109.108.83
+  servername: dl.google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 553e3253-c454-431d-a7e6-42bc06ea5e14
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 53
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: NqYnddqVskPX-aTP4Vdip_XDnMphLwVtgc3XwTc2QVg
+    short-id: 9c2378562188c3cb
+  server: 88.216.190.139
+  servername: ger.nosok-top.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: ff1b0b50-70dc-4bae-866e-55cff86f4d6d
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 54
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
+    short-id: bbc68cec8bb8d2e3
+  server: 144.31.65.59
+  servername: node17.mxvpn.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
+- flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 55
+  network: tcp
+  port: 443
+  server: de151.mechvpn.online
+  servername: ''
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 56
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
+    short-id: bbc68cec8bb8d2e3
+  server: 77.239.123.219
+  servername: node19.mxvpn.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 57
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: rTnh7Y8RsSA5HSvFf-pWT49x8va6U6XHMRgNiMuwB0A
+    short-id: ab88d256
+  server: 170.101.109.37
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: bf645ffe-a3cc-4480-8e4c-9bcd1af41052
+- flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 58
+  network: tcp
+  port: 443
+  server: 217.60.68.179
+  servername: de13.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 551955b3-46e9-5129-95c9-e7474c15ed6b
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 59
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
+    short-id: bbc68cec8bb8d2e3
+  server: node17.mxvpn.dev
+  servername: node17.mxvpn.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 60
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
+    short-id: bbc68cec8bb8d2e3
+  server: 144.31.65.68
+  servername: node18.mxvpn.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 61
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
+    short-id: bbc68cec8bb8d2e3
+  server: node18.mxvpn.dev
+  servername: node18.mxvpn.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
+- flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 62
+  network: tcp
+  port: 443
+  server: 217.60.68.91
+  servername: de6.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 551955b3-46e9-5129-95c9-e7474c15ed6b
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 63
+  network: tcp#🎗️96@oneclickvpnkeys
+  port: 2053
+  reality-opts:
+    public-key: E6u2RbffXIPvia5v5iIZVj6U_VpSBWmGTsHHNtH-5Rg
+    short-id: 417063feab794131
+  server: de3.neobo-tooth.ru
+  servername: vk.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: b6c29ae7-4748-4049-b642-b695c0d2c776
+- name: 🇩🇪 DE - vless 64
+  network: tcp
+  port: 22224
+  server: 63.185.250.13
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: 🇩🇪 DE - vless 65
+  network: tcp
+  port: 22223
+  server: 63.185.250.13
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 66
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
+    short-id: bbc68cec8bb8d2e3
+  server: node20.mxvpn.dev
+  servername: node20.mxvpn.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
+- flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 67
+  network: tcp
+  port: 443
+  server: 217.60.68.130
+  servername: de5.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 551955b3-46e9-5129-95c9-e7474c15ed6b
+- flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 68
+  network: tcp
+  port: 443
+  server: 217.60.68.147
+  servername: de16.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 551955b3-46e9-5129-95c9-e7474c15ed6b
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 69
+  network: tcp
+  port: 11762
+  reality-opts:
+    public-key: R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU
+    short-id: ''
+  server: 157.90.165.181
+  servername: swdist.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7c9b4360-6be9-47f2-ace9-b87297ea3d8f
+- client-fingerprint: chrome
+  name: 🇩🇪 DE - vless 70
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: l5eAOSPQMEyzEPvWGAKvCkcPpsJvR3DJfYo6elw1UTE
+    short-id: 3b802dad547b0847
+  server: 144.31.87.16
+  servername: yandex.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: c40f773e-3b96-417e-b22c-e48cb63ca7d9
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 71
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
+    short-id: bbc68cec8bb8d2e3
+  server: node19.mxvpn.dev
+  servername: node19.mxvpn.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
+- name: 🇩🇪 DE - vless 72
+  network: ws
+  port: 8443
+  server: 64.188.64.141
+  type: vless
+  udp: true
+  uuid: c83ee688-8f37-4f4c-94a2-5d6384950b5d
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 73
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: 6RshLCSAs31qGRa_tWi63KClbh2Kzj9ooXpdaPJKbjs
+    short-id: a6bbc4aecf5d961f
+  server: derman.neobo-tooth.ru
+  servername: vk.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
 - cipher: chacha20-ietf-poly1305
-  name: 🇩🇪 DE - ss 78
-  password: 1hhrqrokj3ag
-  port: 8388
-  server: 209.46.102.22
+  name: 🇩🇪 DE - ss 74
+  password: XqokkvjW0g0asxzbSDLGTw
+  port: 1085
+  server: 77.90.10.176
   type: ss
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪 DE - ss 79
-  password: 2YdE4lFOid5a
-  port: 8388
-  server: 51.195.126.38
-  type: ss
+- name: 🇩🇪 DE - vless 75
+  network: ws
+  port: 2096
+  server: 193.58.121.95
+  type: vless
   udp: true
-- cipher: aes-256-gcm
-  name: 🇩🇪 DE - ss 80
-  password: XKFKl2rULjIp74
-  port: 8008
-  server: 185.226.172.8
-  type: ss
+  uuid: b6c29ae7-4748-4049-b642-b695c0d2c776
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 76
+  network: tcp
+  port: 18020
+  reality-opts:
+    public-key: 0xLgsE7IR5ewIl8gbBvO4199a9Av1_asmucL6V9u6nw
+    short-id: e31e363bd206f49d
+  server: de.ramcalshoping.ir
+  servername: play.google.com
+  tls: true
+  type: vless
   udp: true
-- cipher: aes-256-cfb
-  name: 🇩🇪 DE - ss 81
-  password: amazonskr05
+  uuid: 224398db-7e90-421d-95be-178ec8c9d653
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 77
+  network: tcp
   port: 443
-  server: 3.76.30.105
-  type: ss
+  reality-opts:
+    public-key: ABNRlkjlonYV9TOFYgjWwz0wn1s6sg_yCErsLYkU_Sg
+    short-id: d6ff9019a77e354a
+  server: 144.31.213.225
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
   udp: true
-- cipher: aes-256-gcm
-  name: 🇩🇪 DE - ss 82
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 213.202.208.199
-  type: ss
+  uuid: 9e3de7f7-a595-4117-b1b6-dc41eb870ab1
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 78
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: Lxs8Ruv2zHH0XW5EiQmuCaScfkGPCxWjW02YDWH8pyU
+    short-id: eb0cca7312345678
+  server: 138.124.126.158
+  servername: eh.vk.com
+  tls: true
+  type: vless
   udp: true
-- name: 🇩🇪 DE - trojan 83
+  uuid: b12eebc2-369c-4f3c-96a0-a8bd150ca8d5
+- name: 🇩🇪 DE - vless 79
+  network: tcp
+  port: 33843
+  server: deproxy2.lckdwn.ru
+  servername: deproxy2.lckdwn.ru
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d1b4fb49-f835-4c10-83e1-cb70238d39b5
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 80
+  network: tcp#🎗️83@oneclickvpnkeysvless://7b188eea-b08f-42c2-bac7-d3b0e74218b8@147.182.212.232:56565?encryption=none
+  port: 2053
+  reality-opts:
+    public-key: 6RshLCSAs31qGRa_tWi63KClbh2Kzj9ooXpdaPJKbjs
+    short-id: a6bbc4aecf5d961f
+  server: de-193-58.neobo-tooth.ru
+  servername: vk.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: b6c29ae7-4748-4049-b642-b695c0d2c776
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 81
+  network: tcp
+  port: 6443
+  reality-opts:
+    public-key: B7oB5JwADdY14RFnGLZztuH59DQQOgd3muYLDN2aKW0
+    short-id: ad65f374
+  server: 159.194.201.91
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: c181ae2d-9acc-4faf-8964-fde38ec25d22
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 82
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: SVgtyuD9khylgHuB0treGekxVSHPOS-wPZTNHUf6zj8
+    short-id: 85c86a9863
+  server: 144.31.125.60
+  servername: www.intel.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9015f0bc-2053-4ca1-9b9b-a018b97b32d2
+- client-fingerprint: chrome
+  name: 🇩🇪 DE - vless 83
+  network: grpc
+  port: 7443
+  reality-opts:
+    public-key: P5eqN_q-Vq7M8YgrTIS_yZBgWLskGKQ9hAHhW__R6js
+    short-id: 89136b6e
+  server: 193.233.74.57
+  servername: www.telekom.de
+  tls: true
+  type: vless
+  udp: true
+  uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 84
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: Yed352UFUwRyZWPyVYM_0OvLkxvCjOB7160DdAxKsWE
+    short-id: bc5e336f8fdb
+  server: 80.66.72.179
+  servername: teamdocs.su
+  tls: true
+  type: vless
+  udp: true
+  uuid: 28007472-a4e9-4881-984a-2bf6b3d35917
+- name: 🇩🇪 DE - vless 85
+  network: ws
+  port: 8443
+  server: 172.66.44.124
+  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 86
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk
+    short-id: ff776ff77be48b88
+  server: 181.214.99.33
+  servername: germ2.freeinternat.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: fbb74aa8-b89a-4f20-9504-6b25aadf6681
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 87
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: NqYnddqVskPX-aTP4Vdip_XDnMphLwVtgc3XwTc2QVg
+    short-id: 9c2378562188c3cb
+  server: 88.216.190.138
+  servername: ger.nosok-top.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: ff1b0b50-70dc-4bae-866e-55cff86f4d6d
+- client-fingerprint: firefox
+  name: 🇩🇪 DE - vless 88
+  network: grpc
+  port: 6443
+  reality-opts:
+    public-key: OMlQAFrCMZ3DX0xlnbEZiByLBFzpUE8XJHJsrBzLdlY
+    short-id: 2da4299da566b7
+  server: 193.233.244.15
+  servername: maps.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 81ca8ed2-45ed-46b1-8bd7-e0f78630156a
+- client-fingerprint: qq
+  name: 🇩🇪 DE - vless 89
+  network: tcp
+  port: 6800
+  reality-opts:
+    public-key: lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo
+    short-id: ''
+  server: 162.19.156.14
+  servername: play.google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7595cd50-9326-48e4-a7bc-802e85e643ec
+- name: 🇩🇪 DE - trojan 90
   password: AE62539071
   port: 443
-  server: proper-marlin.rooster465.autos
+  server: teaching-gnu.rooster465.autos
   skip-cert-verify: false
-  sni: ''
+  sni: teaching-gnu.rooster465.autos
   type: trojan
   udp: true
-- name: 🇩🇪 DE - trojan 84
+- name: 🇩🇪 DE - trojan 91
+  password: AE62539071
+  port: 443
+  server: 63.183.239.176
+  skip-cert-verify: false
+  sni: proper-marlin.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 92
+  network: tcp
+  port: 50443
+  reality-opts:
+    public-key: hp9ht_jsxocTnQEbChb1G3JoDF50x-xDT8UYr66D1TQ
+    short-id: ''
+  server: 45.155.71.170
+  servername: www.icloud.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 000f16e8-cc68-4951-b336-acd81996efde
+- client-fingerprint: chrome
+  name: 🇩🇪 DE - vless 93
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: i4Mx_tDND0Xxac3WyA7HgT9rvXdZlXpm5m1EGiQF-Uk
+    short-id: b8aa
+  server: 194.226.169.36
+  servername: yahoo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4706d9c3-eec0-4666-9d84-e608a200e872
+- client-fingerprint: chrome
+  name: 🇩🇪 DE - vless 94
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 6p0aVCkOgd-xaxqSMANYABL6O4Tdbftnxjiy5qcmISQ
+    short-id: 0b
+  server: 45.155.52.231
+  servername: ru2.skydrgn-online.online
+  tls: true
+  type: vless
+  udp: true
+  uuid: 219f9fec-8983-4f6f-af8c-31bd0c6dbf19
+- client-fingerprint: firefox
+  name: 🇩🇪 DE - vless 95
+  network: grpc
+  port: 5443
+  reality-opts:
+    public-key: IuAhgD9QRpVkMeiD8B9jCBEK6KMsNFAZeDeS_90cyi0
+    short-id: 9a8e2538
+  server: 159.194.201.91
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9b559151-95a0-4cc8-8c50-e14796f7e8ad
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 DE - vmess 96
+  network: tcp
+  port: 8443
+  server: 82.115.21.139
+  type: vmess
+  udp: true
+  uuid: 096ab183-9189-4eee-bc06-6055cea0d361
+- name: 🇩🇪 DE - trojan 97
+  password: AE62539071
+  port: 443
+  server: up-dinosaur.rooster465.autos
+  skip-cert-verify: false
+  sni: up-dinosaur.rooster465.autos
+  type: trojan
+  udp: true
+- name: 🇩🇪 DE - trojan 98
+  password: AE62539071
+  port: 443
+  server: moved-bluegill.rooster465.autos
+  skip-cert-verify: false
+  sni: moved-bluegill.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 99
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: YkcQyTOh9YpZmilRob-eVxwoo4uwBAa9oHmURMTFzEM
+    short-id: a7
+  server: 31.77.196.201
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4e7eb9d5-022a-4b0a-ba37-2d1be458947b
+- name: 🇩🇪 DE - vless 100
+  network: ws
+  port: 443
+  server: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+- flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 101
+  network: tcp
+  port: 443
+  server: 31.25.11.144
+  servername: de01.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: '8033102198'
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 102
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: L3twzQA1-k70uPx7p0VEN_ja2XSZ-6rirJY-yOfpO10
+    short-id: 76510b24590fefa5
+  server: 31.76.101.37
+  servername: yandex.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: a67c69c9-c659-4ddd-b432-5220eabc0087
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 103
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: IhbpvWBZmJEzDs4eI2zoFmL_a-1J_7Z7Sepyrn7-xF8
+    short-id: 6547735997055a35
+  server: nodedivice.chickenkiller.com
+  servername: nodefulcrum.mooo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d4d4d103-5074-47e9-96e6-5431f4e35c57
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE - vless 104
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: IhbpvWBZmJEzDs4eI2zoFmL_a-1J_7Z7Sepyrn7-xF8
+    short-id: 6547735997055a35
+  server: nodefulcrum.mooo.com
+  servername: nodefulcrum.mooo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: d4d4d103-5074-47e9-96e6-5431f4e35c57
+- name: 🇩🇪 DE - trojan 105
   password: AE62539071
   port: 443
   server: dashing-bedbug.rooster465.autos
@@ -703,7 +1219,7 @@ proxies:
   sni: ''
   type: trojan
   udp: true
-- name: 🇩🇪 DE - trojan 85
+- name: 🇩🇪 DE - trojan 106
   password: AE62539071
   port: 443
   server: sterling-macaw.rooster465.autos
@@ -711,124 +1227,269 @@ proxies:
   sni: ''
   type: trojan
   udp: true
-- name: 🇩🇪 DE - trojan 86
-  password: MiTiVPN
+- name: 🇩🇪 DE - trojan 107
+  password: AE62539071
   port: 443
-  server: 151.101.56.7
+  server: proper-marlin.rooster465.autos
   skip-cert-verify: false
-  sni: default.fastly.com
-  type: trojan
-  udp: true
-- name: 🇩🇪 DE - trojan 87
-  password: MITIVPN
-  port: 443
-  server: 199.232.78.160
-  skip-cert-verify: true
-  sni: ssl.fastly.com
+  sni: ''
   type: trojan
   udp: true
 - cipher: aes-256-gcm
-  name: 🇮🇹 IT - ss 88
-  password: d1fa2f4b98a38bc8
-  port: 10901
-  server: 194.87.47.61
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT - ss 89
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 185.213.20.110
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT - ss 90
+  name: 🇮🇹 IT - ss 108
   password: Y6R9pAtvxxzmGC
   port: 9090
   server: 38.180.194.61
   type: ss
   udp: true
-- alterId: 0
-  cipher: auto
-  name: 🇳🇱 NL - vmess 91
-  network: tcp
-  port: 30010
-  server: 23.137.249.110
-  type: vmess
-  udp: true
-  uuid: 2cf705df-227b-49ad-8bea-71a47efbd292
-- name: 🇳🇱 NL - vless 92
-  network: tcp
-  port: 62145
-  server: 152.70.59.205
-  type: vless
-  udp: true
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-- name: 🇳🇱 NL - vless 93
-  network: ws
-  port: 443
-  server: service-e492a1-d7d5dc-production.up.railway.app
-  servername: service-e492a1-d7d5dc-production.up.railway.app
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: af77d490-4295-a334-cda7-1a0adb9f8122
-- name: 🇳🇱 NL - vless 94
-  network: ws
-  port: 443
-  server: 69.46.46.18
-  servername: rvg-production-0a48d.up.railway.app
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 55ce9e09-5208-541a-29f2-15c35394b168
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇳🇱 NL - vless 95
+  name: 🇮🇹 IT - vless 109
   network: tcp
   port: 443
   reality-opts:
-    public-key: Q6sZPc96fGUJvHsOjwpAc57V16CajEfhkHHhuv-_Bg4
-    short-id: 0f3adaccbda5e56b
-  server: 84.32.102.235
-  servername: dnlch.mostserv.xyz
+    public-key: GUdrwZxYWVvIFgC2fSJDs6U5Un6c7t1Yuvzl7yI1ohU
+    short-id: 2f6a8c3e90b2d574
+  server: 2.26.130.157
+  servername: nora.mycdn-me.ru
   tls: true
   type: vless
   udp: true
-  uuid: 463a26c2-eba8-0065-89c4-ee5c1373ccbe
-- client-fingerprint: chrome
+  uuid: bda0ede7-ef0a-4fbc-b3b6-1205e55ffb48
+- cipher: aes-256-gcm
+  name: 🇮🇹 IT - ss 110
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 185.213.20.110
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 111
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.156
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 112
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.34
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 113
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 82.38.31.57
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 114
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.184
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 115
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.18
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 116
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 82.38.31.162
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 117
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.39
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 118
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 193.29.139.147
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 119
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.190
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 120
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 193.29.139.144
+  type: ss
+  udp: true
+- client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: 🇳🇱 NL - vless 96
+  name: 🇳🇱 NL - vless 121
   network: tcp
   port: 443
   reality-opts:
-    public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
-    short-id: 660c1badc77a422b
-  server: 31.77.170.103
-  servername: edge-nl.mystatic-cdn.ru
+    public-key: O2ttHpVFmwoAf-E1rHgOlv7NggcwxcWkHHen7jkIBjY
+    short-id: a8e8df4f1fb3e3f8
+  server: nll.mcqueenconnection.ru
+  servername: nll.mcqueenconnection.ru
   tls: true
   type: vless
   udp: true
-  uuid: b11841e3-2acc-45ff-afe0-a9ed9a823aaa
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇳🇱 NL - vless 97
-  network: tcp
-  port: 8443
+  uuid: 176bc48c-460b-4260-abbd-68fd5ea85270
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 122
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.211
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 123
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.164
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 124
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.2
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 125
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.193
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 126
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 193.29.139.204
+  type: ss
+  udp: true
+- client-fingerprint: firefox
+  name: 🇳🇱 NL - vless 127
+  network: grpc
+  port: 443
   reality-opts:
-    public-key: B5F8h8tpeZ-1ydiT0uFgdc30jJyw8H89Y8e-p_VV6yw
-    short-id: 7b
-  server: node12.fastdatastream.com
-  servername: www.amazon.com
+    public-key: VmBEjLUpiEnoNIaPNGDfVPIOzH_ktSDdsGGAvissxgI
+    short-id: ''
+  server: 2.26.82.237
+  servername: speed.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 47388561-cf0c-4cfc-91f8-fdfd9fa3d756
+  uuid: 906be882-7f16-47c3-8702-59db2ada9688
+- client-fingerprint: firefox
+  name: 🇳🇱 NL - vless 128
+  network: grpc
+  port: 25565
+  reality-opts:
+    public-key: pBd5IOD_sCDpIDqgi6EtZ6DAAMGns9n2C3qPH0i3Tno
+    short-id: 0e29dc68
+  server: 85.192.41.222
+  servername: yandex.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 086422b2-3347-45f8-b527-d9e1be25dc56
+- flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 129
+  network: tcp
+  port: 443
+  server: 85.155.98.40
+  servername: nl2.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: '8033102198'
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 130
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.48
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 131
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 193.29.139.198
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 132
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.200
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 133
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.207
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 134
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.47
+  type: ss
+  udp: true
+- cipher: aes-128-cfb
+  name: 🇳🇱 NL - ss 135
+  password: shadowsocks
+  port: 443
+  server: 109.201.152.181
+  type: ss
+  udp: true
+- client-fingerprint: edge
+  name: 🇳🇱 NL - vless 136
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: xq8_e5PNS7vubb8jzDOtfT2MnppCmzUPqXuDwg1xBm8
+    short-id: 96bb8b53
+  server: 195.63.141.201
+  servername: hartfordmedia.online
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4e7eb9d5-022a-4b0a-ba37-2d1be458947b
+- client-fingerprint: firefox
+  name: 🇳🇱 NL - vless 137
+  network: grpc
+  port: 2443
+  reality-opts:
+    public-key: rRg3JiP2006ldJYh2TDPAn7dtlXLcSHdgHgkGI_HZTE
+    short-id: ef567890
+  server: 31.76.252.14
+  servername: ads.x5.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 35066ccf-e303-4b0e-993b-aa2c2cef9c87
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇳🇱 NL - vless 98
+  name: 🇳🇱 NL - vless 138
   network: tcp
   port: 443
   reality-opts:
@@ -840,608 +1501,436 @@ proxies:
   type: vless
   udp: true
   uuid: f20db72d-58c3-4789-9225-03a8cfc2e2c3
-- name: 🇳🇱 NL - vless 99
-  network: ws
-  port: 443
-  server: 69.46.46.40
-  servername: rvg-production-ccf4.up.railway.app
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1365d474-01c0-1c34-5206-3e7ceca5b178
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇳🇱 NL - vless 100
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-    short-id: ''
-  server: 31.58.181.88
-  servername: tradingview.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: febfeec2-9a21-4afc-9edb-0833466672cd
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇳🇱 NL - vless 101
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: SyTPcYz068PdWyB0tongXPgSe1QU2nn-_yYsO959nUQ
-    short-id: 5578c19d39bec828
-  server: nl2.panel11.ru
-  servername: nl2.panel11.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9aff0732-7ce4-4b34-ba20-e67c6df64fdd
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇳🇱 NL - vless 102
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: B5F8h8tpeZ-1ydiT0uFgdc30jJyw8H89Y8e-p_VV6yw
-    short-id: 7b
-  server: 94.198.190.22
-  servername: www.amazon.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 47388561-cf0c-4cfc-91f8-fdfd9fa3d756
-- name: 🇳🇱 NL - vless 103
-  network: ws
-  port: 443
-  server: x4g-production-c371.up.railway.app
-  servername: x4g-production-c371.up.railway.app
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9748f5cf-493a-1c4e-d5e5-52c68516a652
-- name: 🇳🇱 NL - vless 104
-  network: grpc
-  port: 443
-  server: nl-93b742.atlanta-api.com
-  servername: nl-93b742.atlanta-api.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: b11841e3-2acc-45ff-afe0-a9ed9a823aaa
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇳🇱 NL - vless 105
+  name: 🇳🇱 NL - vless 139
   network: tcp
   port: 443
   reality-opts:
-    public-key: Oyd0sn1z_6uNSN6AN63Q7aBq7AUQ1bOsB9MT3FyyiRM
-    short-id: 837fa04e73d6b581
-  server: ot.media-save.com
-  servername: www.ya.ru
+    public-key: 5CybC33jkhMjECeE_99l3PQ_agwiBkawOXwGDgXjTn4
+    short-id: cc3355
+  server: nl.hexflowdata.net
+  servername: nl.hexflowdata.net
   tls: true
   type: vless
   udp: true
-  uuid: acc50200-7f21-4f90-9cca-0057efcbf042
-- name: 🇳🇱 NL - vless 106
-  network: ws
-  port: 443
-  server: 69.46.46.13
-  servername: rvg-production-2164.up.railway.app
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0d3f7c50-591f-eac4-5092-eb37d97772ca
-- name: 🇳🇱 NL - trojan 107
-  password: AE62539071
-  port: 443
-  server: emerging-weevil.rooster465.autos
-  skip-cert-verify: false
-  sni: ''
-  type: trojan
-  udp: true
-- name: 🇳🇱 NL - vless 108
-  network: ws
-  port: 443
-  server: 69.46.46.17
-  servername: rvg-production-cc31.up.railway.app
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1f347596-193a-baf6-a33b-4eeb1bbb548b
-- name: 🇳🇱 NL - hysteria2 109
-  password: gf1:gfhysteria2024
-  port: 443
-  server: 5.129.235.85
-  skip-cert-verify: true
-  sni: ''
-  type: hysteria2
-- name: 🇳🇱 NL - hysteria2 110
-  password: 042a1881-44e4-4781-bd40-bf75164faf4f
-  port: 443
-  server: nl1.noesissite.ru
-  skip-cert-verify: true
-  sni: ''
-  type: hysteria2
-- name: 🇳🇱 NL - hysteria2 111
-  password: LzMWgm6LaNWCm11bFTbynDPq2TqQj03t
-  port: 443
-  server: 5.255.102.165
-  skip-cert-verify: true
-  sni: ''
-  type: hysteria2
-- name: 🇳🇱 NL - hysteria2 112
-  password: 042a1881-44e4-4781-bd40-bf75164faf4f
-  port: 443
-  server: 193.23.194.78
-  skip-cert-verify: false
-  sni: nl1.noesissite.ru
-  type: hysteria2
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 113
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.191
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 114
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.193
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 115
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 193.29.139.129
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 116
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.216
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 117
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.156
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 118
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.189
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 119
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.184
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 120
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.36
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 121
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.3
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 122
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.162
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 123
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.175
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 124
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.17
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 125
-  password: QCXDxuDlTTMD7jtgHUjIoj
-  port: 8080
-  server: 193.29.139.212
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 126
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.179
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 127
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.15
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 128
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.204
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 129
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.174
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 130
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.57
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 131
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.206
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 132
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.34
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 133
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.2
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 134
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.36
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 135
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.185
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 136
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.7
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 137
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.183
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 138
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.180
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 139
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.202
-  type: ss
-  udp: true
+  uuid: f20db72d-58c3-4789-9225-03a8cfc2e2c3
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱 NL - ss 140
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 193.29.139.230
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 141
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 193.29.139.198
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 142
-  password: QCXDxuDlTTMD7jtgHUjIoj
-  port: 8080
-  server: 193.29.139.168
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 143
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 193.29.139.132
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 144
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.203
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 145
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.32
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 146
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.205
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 147
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.219
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 148
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 193.29.139.225
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 149
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.214
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 150
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 193.29.139.147
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 151
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.192
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 152
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.18
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 153
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.181
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 154
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.10
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 155
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.164
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 156
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.39
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 157
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.217
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 158
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 193.29.139.144
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 159
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.11
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 141
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 193.29.139.132
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 142
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 82.38.31.32
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 143
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.49
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 144
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.3
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 145
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: AYL1z7PNyo6LqYLeZpXa50FnK9eEu7o18KHRhOlST1w
+    short-id: bd72
+  server: 50.7.41.142
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8794f67-80d9-4124-8fc5-2d2ce5516573
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 146
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: x8V9jdSIUmz0pTfefPynLuMZNBPphuZcN6eSnbfk1hk
+    short-id: a111c0e21d7b6485
+  server: 104.243.39.90
+  servername: karapetik.mycdn-me.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: bda0ede7-ef0a-4fbc-b3b6-1205e55ffb48
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 147
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.9
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 148
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.13
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 149
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 82.38.31.36
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 150
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
+    short-id: 52c723e0fad49689
+  server: 152.70.58.201
+  servername: www.nvidia.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8892e34a-339b-4526-b88d-cf68c516231c
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 151
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
+    short-id: 15affa0af66dfc79
+  server: 130.12.242.106
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
+- flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 152
+  network: tcp
+  port: 443
+  server: 85.155.98.47
+  servername: nl5.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 551955b3-46e9-5129-95c9-e7474c15ed6b
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 153
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww
+    short-id: ed7b9bdfedb9b8e5
+  server: 144.124.248.186
+  servername: gateway.icloud.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 40de6299-d792-4868-8a82-411ead0aa943
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 154
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: cNWgfJHerzIEb0RXxncP8R9Ex8-FkALOtbhneEIHpR0
+    short-id: a1b2c4d4a1b2c5d5
+  server: 144.31.237.215
+  servername: www.sciencedirect.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9500cf8b-020a-4a70-906c-e14bb5375875
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 155
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww
+    short-id: ed7b9bdfedb9b8e5
+  server: 144.124.246.55
+  servername: gateway.icloud.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 40de6299-d792-4868-8a82-411ead0aa943
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 156
+  network: tcp
+  port: 2444
+  reality-opts:
+    public-key: JsSTmS0VKNaHF-_QKYS-_utnS-LJuPOBrWcMbVE2RDA
+    short-id: 0809f782a29a2030
+  server: 31.76.79.118
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: fc1ee51e-72ec-4af0-ab0f-540c9e22427b
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 157
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: Huy_lu-s4o9jG8z2ocFuhr3l0fIXyLzbnEn1cxX74nU
+    short-id: 05ed0b251011
+  server: 217.60.24.29
+  servername: www.amd.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: ffa85e3d-d589-4406-9272-a18eb58a44f7
+- name: 🇳🇱 NL - hysteria2 158
+  password: gf1:gfhysteria2024
+  port: 443
+  server: 5.129.235.85
+  skip-cert-verify: true
+  sni: speedtest.tinkoff.ru
+  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 159
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.174
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
   name: 🇳🇱 NL - ss 160
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.182
-  type: ss
-  udp: true
-- cipher: aes-128-cfb
-  name: 🇳🇱 NL - ss 161
-  password: shadowsocks
-  port: 443
-  server: 109.201.152.181
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 162
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.155
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 163
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.210
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇳🇱 NL - ss 164
-  password: shadowsocks
-  port: 443
-  server: 158.173.20.208
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 165
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.47
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 166
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.213
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 167
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.42
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 168
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.218
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 169
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.149
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 170
-  password: CJmTCCx7Ltud
-  port: 8388
-  server: nl1.levikogjgfdd.ir
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 171
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.208
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 172
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.48
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 173
-  password: CJmTCCx7Ltud
-  port: 8388
-  server: 108.181.58.239
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 174
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.28
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 175
+  name: 🇳🇱 NL - ss 161
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
-  server: 82.38.31.212
+  server: 82.38.31.201
   type: ss
   udp: true
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 162
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: Q6sZPc96fGUJvHsOjwpAc57V16CajEfhkHHhuv-_Bg4
+    short-id: 0f3adaccbda5e56b
+  server: dnlch.mostserv.xyz
+  servername: dnlch.mostserv.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: 463a26c2-eba8-0065-89c4-ee5c1373ccbe
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 163
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
+    short-id: 1d86d17709852910
+  server: 86.54.28.75
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 44ae52b9-76fc-444d-8e43-186b4384b80a
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 164
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww
+    short-id: ed7b9bdfedb9b8e5
+  server: 144.124.249.252
+  servername: gateway.icloud.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 40de6299-d792-4868-8a82-411ead0aa943
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 165
+  network: tcp
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
+  server: 51.158.206.93
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 166
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: C819rM4M_c473A8glp-eBFh8Fm9O1cmEeXmivDhM1Fc
+    short-id: ''
+  server: 185.125.100.120
+  servername: max.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8f6085da-2a5f-4969-97c8-ee3e490ec75d
+- flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 167
+  network: tcp
+  port: 443
+  server: 85.155.98.127
+  servername: nl7.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 551955b3-46e9-5129-95c9-e7474c15ed6b
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 168
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: O2ttHpVFmwoAf-E1rHgOlv7NggcwxcWkHHen7jkIBjY
+    short-id: a8e8df4f1fb3e3f8
+  server: 31.56.184.133
+  servername: nll.mcqueenconnection.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 176bc48c-460b-4260-abbd-68fd5ea85270
+- name: 🇳🇱 NL - hysteria2 169
+  password: LzMWgm6LaNWCm11bFTbynDPq2TqQj03t
+  port: 443
+  server: 5.255.102.165
+  skip-cert-verify: true
+  sni: 5.255.102.165
+  type: hysteria2
 - cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 176
+  name: 🇳🇱 NL - ss 170
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
-  server: 82.38.31.200
+  server: 82.38.31.208
   type: ss
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 177
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 193.29.139.151
-  type: ss
+- flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 171
+  network: tcp
+  port: 443
+  server: 130.12.242.157
+  servername: nl24.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
   udp: true
+  uuid: 551955b3-46e9-5129-95c9-e7474c15ed6b
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 172
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: cNWgfJHerzIEb0RXxncP8R9Ex8-FkALOtbhneEIHpR0
+    short-id: a1b2c4d4a1b2c5d5
+  server: 94.183.254.26
+  servername: www.sciencedirect.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9500cf8b-020a-4a70-906c-e14bb5375875
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 173
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: cudJBi1zLMATgg_nlqMK5O6Lshlv8EQ2BBQjxbpF4AY
+    short-id: eedf31ed
+  server: 139.64.166.55
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: c743b343-b1c9-4e44-98a9-274df2015727
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 174
+  network: tcp
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
+  server: 51.158.206.98
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 175
+  network: tcp
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
+  server: 51.158.206.80
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- name: 🇳🇱 NL - vless 176
+  network: ws
+  port: 443
+  server: 31.76.76.26
+  type: vless
+  udp: true
+  uuid: 2f956d32-8a67-4bc9-8995-e1621ad20ddc
+- name: 🇳🇱 NL - hysteria2 177
+  password: 042a1881-44e4-4781-bd40-bf75164faf4f
+  port: 443
+  server: nl1.noesissite.ru
+  skip-cert-verify: true
+  sni: 127.0.0.1
+  type: hysteria2
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱 NL - ss 178
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+  password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
-  server: 82.38.31.49
+  server: 82.38.31.181
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
@@ -1453,86 +1942,110 @@ proxies:
   udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱 NL - ss 180
-  password: k1dBOmOB4oqi7Ump37a1bQ
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
-  server: 82.38.31.194
+  server: 193.29.139.129
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱 NL - ss 181
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.187
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 82.38.31.174
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱 NL - ss 182
-  password: CJmTCCx7Ltud
-  port: 8388
-  server: 108.181.126.122
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.46
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱 NL - ss 183
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
-  server: 193.29.139.235
+  server: 82.38.31.42
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱 NL - ss 184
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.199
+  password: VpKABcOpNNA0l5G2AVOmw8
+  port: 62685
+  server: 213.109.147.242
   type: ss
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 185
-  password: wwzVn2ZnHfqYa6l8EWh3eY
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 185
+  network: tcp
   port: 443
-  server: switcher-nick-croquet.freesocks.work
-  type: ss
+  reality-opts:
+    public-key: Q6sZPc96fGUJvHsOjwpAc57V16CajEfhkHHhuv-_Bg4
+    short-id: 0f3adaccbda5e56b
+  server: 84.32.102.235
+  servername: dnlch.mostserv.xyz
+  tls: true
+  type: vless
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 186
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.211
-  type: ss
+  uuid: 463a26c2-eba8-0065-89c4-ee5c1373ccbe
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 186
+  network: tcp
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
+  server: 51.158.206.87
+  servername: fuck.rkn
+  tls: true
+  type: vless
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 187
-  password: RFK38Cg7APneSB5cWDcpbm
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 187
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+    short-id: ''
+  server: 31.58.181.88
+  servername: tradingview.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: febfeec2-9a21-4afc-9edb-0833466672cd
+- name: 🇳🇱 NL - vless 188
+  network: tcp
+  port: 8443
+  server: neth.lckdwn.ru
+  servername: neth.lckdwn.ru
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0db4a87c-c280-4a5f-ae97-903768c5ef4c
+- name: 🇳🇱 NL - vless 189
+  network: ws
   port: 443
-  server: 92.112.126.90
-  type: ss
+  server: neth6.lckdwn.ru
+  type: vless
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 188
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.176
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 189
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.186
-  type: ss
-  udp: true
+  uuid: 2f956d32-8a67-4bc9-8995-e1621ad20ddc
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱 NL - ss 190
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
-  server: 193.29.139.204
+  server: 82.38.31.17
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱 NL - ss 191
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
-  server: 82.38.31.190
+  server: 82.38.31.187
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
@@ -1544,131 +2057,200 @@ proxies:
   udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱 NL - ss 193
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.207
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 194
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.174
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 195
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.16
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 196
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 193.29.139.223
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 197
-  password: 4a2rfixophdjffa8KVA4Aa
-  port: 8080
-  server: 193.29.139.234
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 198
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.13
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 199
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.9
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 200
-  password: VpKABcOpNNA0l5G2AVOmw8
-  port: 62685
-  server: 213.109.147.242
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 201
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.46
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 202
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.26
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 194
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.182
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 195
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww
+    short-id: ed7b9bdfedb9b8e5
+  server: nl.go-vpn.club
+  servername: gateway.icloud.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 40de6299-d792-4868-8a82-411ead0aa943
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 196
+  network: tcp
+  port: 40443
+  reality-opts:
+    public-key: D_ks4Yyk4-osnWBxCFvd0_UEgohUXvR2zJoWQg1CACU
+    short-id: c84f
+  server: 72.56.81.165
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4bf5a71c-d726-4585-b095-7396675706d5
+- name: 🇳🇱 NL - vless 197
+  network: ws
+  port: 443
+  server: rvg-production-4e52.up.railway.app
+  servername: rvg-production-4e52.up.railway.app
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8714c249-3ac4-43cc-321d-1a4a8150fe76
+- client-fingerprint: firefox
+  name: 🇳🇱 NL - vless 198
+  network: tcp
+  port: 448
+  reality-opts:
+    public-key: IuB1jsALd-wN_8jRTGxVLBbVG5eSxNbOXjvFyZlm3UU
+    short-id: 113241ad01e99a2d
+  server: 205.237.109.210
+  servername: www.samsung.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 70df38ff-5a22-4ffc-a3f9-1725515e0ea5
+- name: 🇳🇱 NL - hysteria2 199
+  password: 4e82f6c9-e180-4672-9d63-9060679ebdb9
+  port: 443
+  server: node.embrofree.org
+  skip-cert-verify: false
+  sni: node.embrofree.org
+  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 200
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 193.29.139.230
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 201
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.179
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 202
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.176
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
   name: 🇳🇱 NL - ss 203
-  password: eVC634QvVk5l
-  port: 8388
-  server: 188.116.23.244
+  password: 4a2rfixophdjffa8KVA4Aa
+  port: 8080
+  server: 193.29.139.234
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱 NL - ss 204
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.35
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.202
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱 NL - ss 205
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
-  server: 82.38.31.35
+  server: 82.38.31.16
   type: ss
   udp: true
-- cipher: aes-256-gcm
-  name: 🇳🇱 NL - ss 206
-  password: faBAoD54k87UJG7
-  port: 2375
-  server: 109.104.154.163
+- client-fingerprint: chrome
+  name: 🇳🇱 NL - vless 206
+  network: tcp
+  port: 448
+  reality-opts:
+    public-key: IuB1jsALd-wN_8jRTGxVLBbVG5eSxNbOXjvFyZlm3UU
+    short-id: 113241ad01e99a2d
+  server: 205.237.109.211
+  servername: www.samsung.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 70df38ff-5a22-4ffc-a3f9-1725515e0ea5
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 207
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 8EPzwlenieiAy21ktdbQITnHJHA_biE4TVbN6OcDSSY
+    short-id: 4e40ed8b114da1ae
+  server: 89.124.116.234
+  servername: www.googletagmanager.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4d5fea10-c669-4cb9-91b2-9d179b844520
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: 🇳🇱 NL - vless 208
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: s2vIO76C2QmrvyeujAWxTmQtQ51bwMTWDgQESIm8J1c
+    short-id: bdcaf30f86
+  server: 2.26.70.181
+  servername: 1.aws-lbr.amazonaws.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: a046297b-0f66-4514-8d4f-2a7d200d8d37
+- client-fingerprint: firefox
+  name: 🇳🇱 NL - vless 209
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: tWRR3W8jBAQKBUujLzL7Xri3WXy3F08OxHYrkSOnlAc
+    short-id: 52a6
+  server: 147.45.145.127
+  servername: yahoo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 534cbbe2-cc36-4f2d-8fb0-90410e7148c9
+- client-fingerprint: chrome
+  name: 🇳🇱 NL - vless 210
+  network: grpc
+  port: 9894
+  reality-opts:
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+    short-id: aabbccdd
+  server: 176.108.240.241
+  servername: dl.google.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 130e6aab-9eba-441e-9021-22cbccc72832
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱 NL - ss 211
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.189
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 207
+  name: 🇳🇱 NL - ss 212
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 443
   server: 82.38.31.29
   type: ss
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 208
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.201
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-256-gcm
-  name: 🇳🇱 NL - ss 209
-  password: mkKfxndCZ9c3YIkAAmANrtfI/mlGJwwV9/GdVTYgW3M=:JazxiYc3Mc5tLn/Te3T59W6Zw4Z/BPuepQ0VlVD/cZ8=
-  port: 443
-  server: 193.124.203.144
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL - ss 210
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.195
-  type: ss
-  udp: true
-- name: 🇳🇱 NL - trojan 211
+- name: 🇳🇱 NL - trojan 213
   password: AE62539071
   port: 443
   server: thorough-falcon.rooster465.autos
@@ -1676,25 +2258,34 @@ proxies:
   sni: ''
   type: trojan
   udp: true
-- name: 🇳🇱 NL - trojan 212
-  password: AE62539071
+- flow: xtls-rprx-vision
+  name: 🇵🇱 PL - vless 214
+  network: tcp
   port: 443
-  server: present-warthog.rooster465.autos
+  server: 31.56.188.152
+  servername: pl11.fast-connect-service.site
   skip-cert-verify: false
-  sni: ''
-  type: trojan
+  tls: true
+  type: vless
   udp: true
-- name: 🇳🇱 NL - trojan 213
-  password: AE62539071
-  port: 443
-  server: whole-woodcock.rooster465.autos
-  skip-cert-verify: false
-  sni: ''
-  type: trojan
-  udp: true
+  uuid: 551955b3-46e9-5129-95c9-e7474c15ed6b
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇵🇱 PL - vless 214
+  name: 🇵🇱 PL - vless 215
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: HKpd1sbrhBds8SJSL0d22MAq_QyTR6EP6y5b5DYol3U
+    short-id: ''
+  server: meow-warsaw.nethcloud.top
+  servername: www.wikihow.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: a34b5e88-cf0d-4c01-8199-2d1002d3c787
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: 🇵🇱 PL - vless 216
   network: tcp
   port: 443
   reality-opts:
@@ -1707,19 +2298,29 @@ proxies:
   udp: true
   uuid: ff1b0b50-70dc-4bae-866e-55cff86f4d6d
 - flow: xtls-rprx-vision
-  name: 🇵🇱 PL - vless 215
+  name: 🇵🇱 PL - vless 217
   network: tcp
-  port: 443
-  server: 95.85.246.138
-  servername: pl9.fast-connect-service.site
+  port: 8443
+  server: 2.26.255.36
+  servername: po1.hys.braidx.tech
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: '8033102198'
-- client-fingerprint: firefox
+  uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
+- name: 🇵🇱 PL - vless 218
+  network: tcp
+  port: 8443
+  server: 82.40.62.22
+  servername: ''
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: YOUR-UUID
+- client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: 🇵🇱 PL - vless 216
+  name: 🇵🇱 PL - vless 219
   network: tcp
   port: 443
   reality-opts:
@@ -1731,22 +2332,7 @@ proxies:
   type: vless
   udp: true
   uuid: ff1b0b50-70dc-4bae-866e-55cff86f4d6d
-- cipher: aes-256-gcm
-  name: 🇵🇱 PL - ss 217
-  password: Y6R9pAtvxxzmGC
-  port: 5600
-  server: 92.118.205.211
-  type: ss
-  udp: true
-- name: 🇵🇱 PL - trojan 218
-  password: ND91608427
-  port: 443
-  server: discrete-basilisk.rooster465.autos
-  skip-cert-verify: true
-  sni: ''
-  type: trojan
-  udp: true
-- name: 🇵🇱 PL - trojan 219
+- name: 🇵🇱 PL - trojan 220
   password: ND91608427
   port: 443
   server: 202.78.163.148
@@ -1754,23 +2340,43 @@ proxies:
   sni: discrete-basilisk.rooster465.autos
   type: trojan
   udp: true
-- name: 🇵🇱 PL - trojan 220
+- name: 🇵🇱 PL - vless 221
+  network: grpc
+  port: 443
+  server: 201.24.126.97
+  servername: ru1.kinotorg.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: f93e84a4-b79c-42af-97f9-a544f3d6121f
+- name: 🇵🇱 PL - trojan 222
   password: ND91608427
   port: 443
   server: relaxed-gull.rooster465.autos
   skip-cert-verify: true
-  sni: relaxed-gull.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇵🇱 PL - trojan 221
-  password: AE62539071
-  port: 443
-  server: relative-locust.rooster465.autos
-  skip-cert-verify: false
   sni: ''
   type: trojan
   udp: true
-- name: 🇵🇱 PL - trojan 222
+- flow: xtls-rprx-vision
+  name: 🇵🇱 PL - vless 223
+  network: tcp
+  port: 443
+  server: 82.26.91.87
+  servername: faster.yandex-apicloud.ru
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7e760d89-a8f4-4a87-8f10-b4af28c61b7f
+- name: 🇵🇱 PL - vless 224
+  network: ws
+  port: 9815
+  server: 128.204.223.94
+  type: vless
+  udp: true
+  uuid: 37a0bd7c-8b9f-4693-8916-bd1e2da0a817
+- name: 🇵🇱 PL - trojan 225
   password: ND91608427
   port: 443
   server: 202.78.163.248
@@ -1778,81 +2384,65 @@ proxies:
   sni: relaxed-gull.rooster465.autos
   type: trojan
   udp: true
-- name: 🇵🇱 PL - trojan 223
-  password: AE62539071
-  port: 443
-  server: tolerant-mosquito.rooster465.autos
-  skip-cert-verify: false
-  sni: ''
-  type: trojan
-  udp: true
-- name: 🇵🇱 PL - trojan 224
-  password: AE62539071
-  port: 443
-  server: game-firefly.rooster465.autos
-  skip-cert-verify: false
-  sni: ''
-  type: trojan
-  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇷 FR - trojan 1
+  - 🇫🇷 FR - vless 1
   - 🇫🇷 FR - vless 2
   - 🇫🇷 FR - vless 3
-  - 🇫🇷 FR - hysteria2 4
-  - 🇫🇷 FR - hysteria2 5
-  - 🇫🇷 FR - hysteria2 6
-  - 🇫🇷 FR - hysteria2 7
-  - 🇫🇷 FR - ss 8
-  - 🇫🇷 FR - trojan 9
-  - 🇫🇷 FR - trojan 10
-  - 🇫🇷 FR - trojan 11
-  - 🇫🇷 FR - trojan 12
-  - 🇫🇷 FR - trojan 13
-  - 🇫🇷 FR - trojan 14
-  - 🇫🇷 FR - trojan 15
-  - 🇫🇷 FR - trojan 16
-  - 🇫🇷 FR - trojan 17
-  - 🇫🇷 FR - trojan 18
-  - 🇫🇷 FR - trojan 19
-  - 🇫🇷 FR - trojan 20
-  - 🇫🇷 FR - trojan 21
-  - 🇫🇷 FR - trojan 22
-  - 🇫🇷 FR - trojan 23
-  - 🇫🇷 FR - trojan 24
-  - 🇫🇷 FR - trojan 25
-  - 🇫🇷 FR - trojan 26
+  - 🇫🇷 FR - vless 4
+  - 🇫🇷 FR - vless 5
+  - 🇫🇷 FR - vless 6
+  - 🇫🇷 FR - vless 7
+  - 🇫🇷 FR - vless 8
+  - 🇫🇷 FR - vless 9
+  - 🇫🇷 FR - vless 10
+  - 🇫🇷 FR - vless 11
+  - 🇫🇷 FR - vless 12
+  - 🇫🇷 FR - vless 13
+  - 🇫🇷 FR - vless 14
+  - 🇫🇷 FR - vless 15
+  - 🇫🇷 FR - vless 16
+  - 🇫🇷 FR - vless 17
+  - 🇫🇷 FR - vless 18
+  - 🇫🇷 FR - vless 19
+  - 🇫🇷 FR - hysteria2 20
+  - 🇫🇷 FR - hysteria2 21
+  - 🇫🇷 FR - vless 22
+  - 🇫🇷 FR - vless 23
+  - 🇫🇷 FR - vless 24
+  - 🇫🇷 FR - vless 25
+  - 🇫🇷 FR - vless 26
   - 🇫🇷 FR - trojan 27
-  - 🇫🇷 FR - trojan 28
-  - 🇫🇷 FR - trojan 29
-  - 🇫🇷 FR - trojan 30
-  - 🇫🇷 FR - trojan 31
+  - 🇫🇷 FR - vless 28
+  - 🇫🇷 FR - vless 29
+  - 🇫🇷 FR - vless 30
+  - 🇫🇷 FR - vless 31
   - 🇫🇷 FR - trojan 32
   - 🇫🇷 FR - trojan 33
   - 🇫🇷 FR - trojan 34
   - 🇫🇷 FR - trojan 35
   - 🇫🇷 FR - trojan 36
-  - 🇫🇷 FR - trojan 37
-  - 🇫🇷 FR - trojan 38
-  - 🇫🇷 FR - trojan 39
-  - 🇫🇷 FR - trojan 40
-  - 🇫🇷 FR - trojan 41
-  - 🇫🇷 FR - trojan 42
-  - 🇫🇷 FR - trojan 43
-  - 🇫🇷 FR - trojan 44
-  - 🇫🇷 FR - trojan 45
-  - 🇫🇷 FR - trojan 46
-  - 🇫🇷 FR - trojan 47
-  - 🇫🇷 FR - trojan 48
-  - 🇫🇷 FR - trojan 49
-  - 🇫🇷 FR - trojan 50
-  - 🇫🇷 FR - trojan 51
-  - 🇫🇷 FR - trojan 52
-  - 🇩🇪 DE - ss 53
-  - 🇩🇪 DE - ss 54
+  - 🇩🇪 DE - vless 37
+  - 🇩🇪 DE - vless 38
+  - 🇩🇪 DE - vless 39
+  - 🇩🇪 DE - vless 40
+  - 🇩🇪 DE - vless 41
+  - 🇩🇪 DE - vless 42
+  - 🇩🇪 DE - vmess 43
+  - 🇩🇪 DE - vless 44
+  - 🇩🇪 DE - vless 45
+  - 🇩🇪 DE - vless 46
+  - 🇩🇪 DE - vless 47
+  - 🇩🇪 DE - vless 48
+  - 🇩🇪 DE - vless 49
+  - 🇩🇪 DE - vless 50
+  - 🇩🇪 DE - vless 51
+  - 🇩🇪 DE - vless 52
+  - 🇩🇪 DE - vless 53
+  - 🇩🇪 DE - vless 54
   - 🇩🇪 DE - vless 55
   - 🇩🇪 DE - vless 56
   - 🇩🇪 DE - vless 57
@@ -1860,57 +2450,57 @@ proxy-groups:
   - 🇩🇪 DE - vless 59
   - 🇩🇪 DE - vless 60
   - 🇩🇪 DE - vless 61
-  - 🇩🇪 DE - trojan 62
-  - 🇩🇪 DE - trojan 63
-  - 🇩🇪 DE - trojan 64
-  - 🇩🇪 DE - trojan 65
-  - 🇩🇪 DE - trojan 66
+  - 🇩🇪 DE - vless 62
+  - 🇩🇪 DE - vless 63
+  - 🇩🇪 DE - vless 64
+  - 🇩🇪 DE - vless 65
+  - 🇩🇪 DE - vless 66
   - 🇩🇪 DE - vless 67
   - 🇩🇪 DE - vless 68
   - 🇩🇪 DE - vless 69
   - 🇩🇪 DE - vless 70
-  - 🇩🇪 DE - trojan 71
+  - 🇩🇪 DE - vless 71
   - 🇩🇪 DE - vless 72
   - 🇩🇪 DE - vless 73
-  - 🇩🇪 DE - hysteria2 74
-  - 🇩🇪 DE - ss 75
-  - 🇩🇪 DE - ss 76
-  - 🇩🇪 DE - ss 77
-  - 🇩🇪 DE - ss 78
-  - 🇩🇪 DE - ss 79
-  - 🇩🇪 DE - ss 80
-  - 🇩🇪 DE - ss 81
-  - 🇩🇪 DE - ss 82
-  - 🇩🇪 DE - trojan 83
-  - 🇩🇪 DE - trojan 84
-  - 🇩🇪 DE - trojan 85
-  - 🇩🇪 DE - trojan 86
-  - 🇩🇪 DE - trojan 87
-  - 🇮🇹 IT - ss 88
-  - 🇮🇹 IT - ss 89
-  - 🇮🇹 IT - ss 90
-  - 🇳🇱 NL - vmess 91
-  - 🇳🇱 NL - vless 92
-  - 🇳🇱 NL - vless 93
-  - 🇳🇱 NL - vless 94
-  - 🇳🇱 NL - vless 95
-  - 🇳🇱 NL - vless 96
-  - 🇳🇱 NL - vless 97
-  - 🇳🇱 NL - vless 98
-  - 🇳🇱 NL - vless 99
-  - 🇳🇱 NL - vless 100
-  - 🇳🇱 NL - vless 101
-  - 🇳🇱 NL - vless 102
-  - 🇳🇱 NL - vless 103
-  - 🇳🇱 NL - vless 104
-  - 🇳🇱 NL - vless 105
-  - 🇳🇱 NL - vless 106
-  - 🇳🇱 NL - trojan 107
-  - 🇳🇱 NL - vless 108
-  - 🇳🇱 NL - hysteria2 109
-  - 🇳🇱 NL - hysteria2 110
-  - 🇳🇱 NL - hysteria2 111
-  - 🇳🇱 NL - hysteria2 112
+  - 🇩🇪 DE - ss 74
+  - 🇩🇪 DE - vless 75
+  - 🇩🇪 DE - vless 76
+  - 🇩🇪 DE - vless 77
+  - 🇩🇪 DE - vless 78
+  - 🇩🇪 DE - vless 79
+  - 🇩🇪 DE - vless 80
+  - 🇩🇪 DE - vless 81
+  - 🇩🇪 DE - vless 82
+  - 🇩🇪 DE - vless 83
+  - 🇩🇪 DE - vless 84
+  - 🇩🇪 DE - vless 85
+  - 🇩🇪 DE - vless 86
+  - 🇩🇪 DE - vless 87
+  - 🇩🇪 DE - vless 88
+  - 🇩🇪 DE - vless 89
+  - 🇩🇪 DE - trojan 90
+  - 🇩🇪 DE - trojan 91
+  - 🇩🇪 DE - vless 92
+  - 🇩🇪 DE - vless 93
+  - 🇩🇪 DE - vless 94
+  - 🇩🇪 DE - vless 95
+  - 🇩🇪 DE - vmess 96
+  - 🇩🇪 DE - trojan 97
+  - 🇩🇪 DE - trojan 98
+  - 🇩🇪 DE - vless 99
+  - 🇩🇪 DE - vless 100
+  - 🇩🇪 DE - vless 101
+  - 🇩🇪 DE - vless 102
+  - 🇩🇪 DE - vless 103
+  - 🇩🇪 DE - vless 104
+  - 🇩🇪 DE - trojan 105
+  - 🇩🇪 DE - trojan 106
+  - 🇩🇪 DE - trojan 107
+  - 🇮🇹 IT - ss 108
+  - 🇮🇹 IT - vless 109
+  - 🇮🇹 IT - ss 110
+  - 🇳🇱 NL - ss 111
+  - 🇳🇱 NL - ss 112
   - 🇳🇱 NL - ss 113
   - 🇳🇱 NL - ss 114
   - 🇳🇱 NL - ss 115
@@ -1919,63 +2509,63 @@ proxy-groups:
   - 🇳🇱 NL - ss 118
   - 🇳🇱 NL - ss 119
   - 🇳🇱 NL - ss 120
-  - 🇳🇱 NL - ss 121
+  - 🇳🇱 NL - vless 121
   - 🇳🇱 NL - ss 122
   - 🇳🇱 NL - ss 123
   - 🇳🇱 NL - ss 124
   - 🇳🇱 NL - ss 125
   - 🇳🇱 NL - ss 126
-  - 🇳🇱 NL - ss 127
-  - 🇳🇱 NL - ss 128
-  - 🇳🇱 NL - ss 129
+  - 🇳🇱 NL - vless 127
+  - 🇳🇱 NL - vless 128
+  - 🇳🇱 NL - vless 129
   - 🇳🇱 NL - ss 130
   - 🇳🇱 NL - ss 131
   - 🇳🇱 NL - ss 132
   - 🇳🇱 NL - ss 133
   - 🇳🇱 NL - ss 134
   - 🇳🇱 NL - ss 135
-  - 🇳🇱 NL - ss 136
-  - 🇳🇱 NL - ss 137
-  - 🇳🇱 NL - ss 138
-  - 🇳🇱 NL - ss 139
+  - 🇳🇱 NL - vless 136
+  - 🇳🇱 NL - vless 137
+  - 🇳🇱 NL - vless 138
+  - 🇳🇱 NL - vless 139
   - 🇳🇱 NL - ss 140
   - 🇳🇱 NL - ss 141
   - 🇳🇱 NL - ss 142
   - 🇳🇱 NL - ss 143
   - 🇳🇱 NL - ss 144
-  - 🇳🇱 NL - ss 145
-  - 🇳🇱 NL - ss 146
+  - 🇳🇱 NL - vless 145
+  - 🇳🇱 NL - vless 146
   - 🇳🇱 NL - ss 147
   - 🇳🇱 NL - ss 148
   - 🇳🇱 NL - ss 149
-  - 🇳🇱 NL - ss 150
-  - 🇳🇱 NL - ss 151
-  - 🇳🇱 NL - ss 152
-  - 🇳🇱 NL - ss 153
-  - 🇳🇱 NL - ss 154
-  - 🇳🇱 NL - ss 155
-  - 🇳🇱 NL - ss 156
-  - 🇳🇱 NL - ss 157
-  - 🇳🇱 NL - ss 158
+  - 🇳🇱 NL - vless 150
+  - 🇳🇱 NL - vless 151
+  - 🇳🇱 NL - vless 152
+  - 🇳🇱 NL - vless 153
+  - 🇳🇱 NL - vless 154
+  - 🇳🇱 NL - vless 155
+  - 🇳🇱 NL - vless 156
+  - 🇳🇱 NL - vless 157
+  - 🇳🇱 NL - hysteria2 158
   - 🇳🇱 NL - ss 159
   - 🇳🇱 NL - ss 160
   - 🇳🇱 NL - ss 161
-  - 🇳🇱 NL - ss 162
-  - 🇳🇱 NL - ss 163
-  - 🇳🇱 NL - ss 164
-  - 🇳🇱 NL - ss 165
-  - 🇳🇱 NL - ss 166
-  - 🇳🇱 NL - ss 167
-  - 🇳🇱 NL - ss 168
-  - 🇳🇱 NL - ss 169
+  - 🇳🇱 NL - vless 162
+  - 🇳🇱 NL - vless 163
+  - 🇳🇱 NL - vless 164
+  - 🇳🇱 NL - vless 165
+  - 🇳🇱 NL - vless 166
+  - 🇳🇱 NL - vless 167
+  - 🇳🇱 NL - vless 168
+  - 🇳🇱 NL - hysteria2 169
   - 🇳🇱 NL - ss 170
-  - 🇳🇱 NL - ss 171
-  - 🇳🇱 NL - ss 172
-  - 🇳🇱 NL - ss 173
-  - 🇳🇱 NL - ss 174
-  - 🇳🇱 NL - ss 175
-  - 🇳🇱 NL - ss 176
-  - 🇳🇱 NL - ss 177
+  - 🇳🇱 NL - vless 171
+  - 🇳🇱 NL - vless 172
+  - 🇳🇱 NL - vless 173
+  - 🇳🇱 NL - vless 174
+  - 🇳🇱 NL - vless 175
+  - 🇳🇱 NL - vless 176
+  - 🇳🇱 NL - hysteria2 177
   - 🇳🇱 NL - ss 178
   - 🇳🇱 NL - ss 179
   - 🇳🇱 NL - ss 180
@@ -1983,106 +2573,107 @@ proxy-groups:
   - 🇳🇱 NL - ss 182
   - 🇳🇱 NL - ss 183
   - 🇳🇱 NL - ss 184
-  - 🇳🇱 NL - ss 185
-  - 🇳🇱 NL - ss 186
-  - 🇳🇱 NL - ss 187
-  - 🇳🇱 NL - ss 188
-  - 🇳🇱 NL - ss 189
+  - 🇳🇱 NL - vless 185
+  - 🇳🇱 NL - vless 186
+  - 🇳🇱 NL - vless 187
+  - 🇳🇱 NL - vless 188
+  - 🇳🇱 NL - vless 189
   - 🇳🇱 NL - ss 190
   - 🇳🇱 NL - ss 191
   - 🇳🇱 NL - ss 192
   - 🇳🇱 NL - ss 193
   - 🇳🇱 NL - ss 194
-  - 🇳🇱 NL - ss 195
-  - 🇳🇱 NL - ss 196
-  - 🇳🇱 NL - ss 197
-  - 🇳🇱 NL - ss 198
-  - 🇳🇱 NL - ss 199
+  - 🇳🇱 NL - vless 195
+  - 🇳🇱 NL - vless 196
+  - 🇳🇱 NL - vless 197
+  - 🇳🇱 NL - vless 198
+  - 🇳🇱 NL - hysteria2 199
   - 🇳🇱 NL - ss 200
   - 🇳🇱 NL - ss 201
   - 🇳🇱 NL - ss 202
   - 🇳🇱 NL - ss 203
   - 🇳🇱 NL - ss 204
   - 🇳🇱 NL - ss 205
-  - 🇳🇱 NL - ss 206
-  - 🇳🇱 NL - ss 207
-  - 🇳🇱 NL - ss 208
-  - 🇳🇱 NL - ss 209
-  - 🇳🇱 NL - ss 210
-  - 🇳🇱 NL - trojan 211
-  - 🇳🇱 NL - trojan 212
+  - 🇳🇱 NL - vless 206
+  - 🇳🇱 NL - vless 207
+  - 🇳🇱 NL - vless 208
+  - 🇳🇱 NL - vless 209
+  - 🇳🇱 NL - vless 210
+  - 🇳🇱 NL - ss 211
+  - 🇳🇱 NL - ss 212
   - 🇳🇱 NL - trojan 213
   - 🇵🇱 PL - vless 214
   - 🇵🇱 PL - vless 215
   - 🇵🇱 PL - vless 216
-  - 🇵🇱 PL - ss 217
-  - 🇵🇱 PL - trojan 218
-  - 🇵🇱 PL - trojan 219
+  - 🇵🇱 PL - vless 217
+  - 🇵🇱 PL - vless 218
+  - 🇵🇱 PL - vless 219
   - 🇵🇱 PL - trojan 220
-  - 🇵🇱 PL - trojan 221
+  - 🇵🇱 PL - vless 221
   - 🇵🇱 PL - trojan 222
-  - 🇵🇱 PL - trojan 223
-  - 🇵🇱 PL - trojan 224
+  - 🇵🇱 PL - vless 223
+  - 🇵🇱 PL - vless 224
+  - 🇵🇱 PL - trojan 225
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 100
   proxies:
-  - 🇫🇷 FR - trojan 1
+  - 🇫🇷 FR - vless 1
   - 🇫🇷 FR - vless 2
   - 🇫🇷 FR - vless 3
-  - 🇫🇷 FR - hysteria2 4
-  - 🇫🇷 FR - hysteria2 5
-  - 🇫🇷 FR - hysteria2 6
-  - 🇫🇷 FR - hysteria2 7
-  - 🇫🇷 FR - ss 8
-  - 🇫🇷 FR - trojan 9
-  - 🇫🇷 FR - trojan 10
-  - 🇫🇷 FR - trojan 11
-  - 🇫🇷 FR - trojan 12
-  - 🇫🇷 FR - trojan 13
-  - 🇫🇷 FR - trojan 14
-  - 🇫🇷 FR - trojan 15
-  - 🇫🇷 FR - trojan 16
-  - 🇫🇷 FR - trojan 17
-  - 🇫🇷 FR - trojan 18
-  - 🇫🇷 FR - trojan 19
-  - 🇫🇷 FR - trojan 20
-  - 🇫🇷 FR - trojan 21
-  - 🇫🇷 FR - trojan 22
-  - 🇫🇷 FR - trojan 23
-  - 🇫🇷 FR - trojan 24
-  - 🇫🇷 FR - trojan 25
-  - 🇫🇷 FR - trojan 26
+  - 🇫🇷 FR - vless 4
+  - 🇫🇷 FR - vless 5
+  - 🇫🇷 FR - vless 6
+  - 🇫🇷 FR - vless 7
+  - 🇫🇷 FR - vless 8
+  - 🇫🇷 FR - vless 9
+  - 🇫🇷 FR - vless 10
+  - 🇫🇷 FR - vless 11
+  - 🇫🇷 FR - vless 12
+  - 🇫🇷 FR - vless 13
+  - 🇫🇷 FR - vless 14
+  - 🇫🇷 FR - vless 15
+  - 🇫🇷 FR - vless 16
+  - 🇫🇷 FR - vless 17
+  - 🇫🇷 FR - vless 18
+  - 🇫🇷 FR - vless 19
+  - 🇫🇷 FR - hysteria2 20
+  - 🇫🇷 FR - hysteria2 21
+  - 🇫🇷 FR - vless 22
+  - 🇫🇷 FR - vless 23
+  - 🇫🇷 FR - vless 24
+  - 🇫🇷 FR - vless 25
+  - 🇫🇷 FR - vless 26
   - 🇫🇷 FR - trojan 27
-  - 🇫🇷 FR - trojan 28
-  - 🇫🇷 FR - trojan 29
-  - 🇫🇷 FR - trojan 30
-  - 🇫🇷 FR - trojan 31
+  - 🇫🇷 FR - vless 28
+  - 🇫🇷 FR - vless 29
+  - 🇫🇷 FR - vless 30
+  - 🇫🇷 FR - vless 31
   - 🇫🇷 FR - trojan 32
   - 🇫🇷 FR - trojan 33
   - 🇫🇷 FR - trojan 34
   - 🇫🇷 FR - trojan 35
   - 🇫🇷 FR - trojan 36
-  - 🇫🇷 FR - trojan 37
-  - 🇫🇷 FR - trojan 38
-  - 🇫🇷 FR - trojan 39
-  - 🇫🇷 FR - trojan 40
-  - 🇫🇷 FR - trojan 41
-  - 🇫🇷 FR - trojan 42
-  - 🇫🇷 FR - trojan 43
-  - 🇫🇷 FR - trojan 44
-  - 🇫🇷 FR - trojan 45
-  - 🇫🇷 FR - trojan 46
-  - 🇫🇷 FR - trojan 47
-  - 🇫🇷 FR - trojan 48
-  - 🇫🇷 FR - trojan 49
-  - 🇫🇷 FR - trojan 50
-  - 🇫🇷 FR - trojan 51
-  - 🇫🇷 FR - trojan 52
-  - 🇩🇪 DE - ss 53
-  - 🇩🇪 DE - ss 54
+  - 🇩🇪 DE - vless 37
+  - 🇩🇪 DE - vless 38
+  - 🇩🇪 DE - vless 39
+  - 🇩🇪 DE - vless 40
+  - 🇩🇪 DE - vless 41
+  - 🇩🇪 DE - vless 42
+  - 🇩🇪 DE - vmess 43
+  - 🇩🇪 DE - vless 44
+  - 🇩🇪 DE - vless 45
+  - 🇩🇪 DE - vless 46
+  - 🇩🇪 DE - vless 47
+  - 🇩🇪 DE - vless 48
+  - 🇩🇪 DE - vless 49
+  - 🇩🇪 DE - vless 50
+  - 🇩🇪 DE - vless 51
+  - 🇩🇪 DE - vless 52
+  - 🇩🇪 DE - vless 53
+  - 🇩🇪 DE - vless 54
   - 🇩🇪 DE - vless 55
   - 🇩🇪 DE - vless 56
   - 🇩🇪 DE - vless 57
@@ -2090,57 +2681,57 @@ proxy-groups:
   - 🇩🇪 DE - vless 59
   - 🇩🇪 DE - vless 60
   - 🇩🇪 DE - vless 61
-  - 🇩🇪 DE - trojan 62
-  - 🇩🇪 DE - trojan 63
-  - 🇩🇪 DE - trojan 64
-  - 🇩🇪 DE - trojan 65
-  - 🇩🇪 DE - trojan 66
+  - 🇩🇪 DE - vless 62
+  - 🇩🇪 DE - vless 63
+  - 🇩🇪 DE - vless 64
+  - 🇩🇪 DE - vless 65
+  - 🇩🇪 DE - vless 66
   - 🇩🇪 DE - vless 67
   - 🇩🇪 DE - vless 68
   - 🇩🇪 DE - vless 69
   - 🇩🇪 DE - vless 70
-  - 🇩🇪 DE - trojan 71
+  - 🇩🇪 DE - vless 71
   - 🇩🇪 DE - vless 72
   - 🇩🇪 DE - vless 73
-  - 🇩🇪 DE - hysteria2 74
-  - 🇩🇪 DE - ss 75
-  - 🇩🇪 DE - ss 76
-  - 🇩🇪 DE - ss 77
-  - 🇩🇪 DE - ss 78
-  - 🇩🇪 DE - ss 79
-  - 🇩🇪 DE - ss 80
-  - 🇩🇪 DE - ss 81
-  - 🇩🇪 DE - ss 82
-  - 🇩🇪 DE - trojan 83
-  - 🇩🇪 DE - trojan 84
-  - 🇩🇪 DE - trojan 85
-  - 🇩🇪 DE - trojan 86
-  - 🇩🇪 DE - trojan 87
-  - 🇮🇹 IT - ss 88
-  - 🇮🇹 IT - ss 89
-  - 🇮🇹 IT - ss 90
-  - 🇳🇱 NL - vmess 91
-  - 🇳🇱 NL - vless 92
-  - 🇳🇱 NL - vless 93
-  - 🇳🇱 NL - vless 94
-  - 🇳🇱 NL - vless 95
-  - 🇳🇱 NL - vless 96
-  - 🇳🇱 NL - vless 97
-  - 🇳🇱 NL - vless 98
-  - 🇳🇱 NL - vless 99
-  - 🇳🇱 NL - vless 100
-  - 🇳🇱 NL - vless 101
-  - 🇳🇱 NL - vless 102
-  - 🇳🇱 NL - vless 103
-  - 🇳🇱 NL - vless 104
-  - 🇳🇱 NL - vless 105
-  - 🇳🇱 NL - vless 106
-  - 🇳🇱 NL - trojan 107
-  - 🇳🇱 NL - vless 108
-  - 🇳🇱 NL - hysteria2 109
-  - 🇳🇱 NL - hysteria2 110
-  - 🇳🇱 NL - hysteria2 111
-  - 🇳🇱 NL - hysteria2 112
+  - 🇩🇪 DE - ss 74
+  - 🇩🇪 DE - vless 75
+  - 🇩🇪 DE - vless 76
+  - 🇩🇪 DE - vless 77
+  - 🇩🇪 DE - vless 78
+  - 🇩🇪 DE - vless 79
+  - 🇩🇪 DE - vless 80
+  - 🇩🇪 DE - vless 81
+  - 🇩🇪 DE - vless 82
+  - 🇩🇪 DE - vless 83
+  - 🇩🇪 DE - vless 84
+  - 🇩🇪 DE - vless 85
+  - 🇩🇪 DE - vless 86
+  - 🇩🇪 DE - vless 87
+  - 🇩🇪 DE - vless 88
+  - 🇩🇪 DE - vless 89
+  - 🇩🇪 DE - trojan 90
+  - 🇩🇪 DE - trojan 91
+  - 🇩🇪 DE - vless 92
+  - 🇩🇪 DE - vless 93
+  - 🇩🇪 DE - vless 94
+  - 🇩🇪 DE - vless 95
+  - 🇩🇪 DE - vmess 96
+  - 🇩🇪 DE - trojan 97
+  - 🇩🇪 DE - trojan 98
+  - 🇩🇪 DE - vless 99
+  - 🇩🇪 DE - vless 100
+  - 🇩🇪 DE - vless 101
+  - 🇩🇪 DE - vless 102
+  - 🇩🇪 DE - vless 103
+  - 🇩🇪 DE - vless 104
+  - 🇩🇪 DE - trojan 105
+  - 🇩🇪 DE - trojan 106
+  - 🇩🇪 DE - trojan 107
+  - 🇮🇹 IT - ss 108
+  - 🇮🇹 IT - vless 109
+  - 🇮🇹 IT - ss 110
+  - 🇳🇱 NL - ss 111
+  - 🇳🇱 NL - ss 112
   - 🇳🇱 NL - ss 113
   - 🇳🇱 NL - ss 114
   - 🇳🇱 NL - ss 115
@@ -2149,63 +2740,63 @@ proxy-groups:
   - 🇳🇱 NL - ss 118
   - 🇳🇱 NL - ss 119
   - 🇳🇱 NL - ss 120
-  - 🇳🇱 NL - ss 121
+  - 🇳🇱 NL - vless 121
   - 🇳🇱 NL - ss 122
   - 🇳🇱 NL - ss 123
   - 🇳🇱 NL - ss 124
   - 🇳🇱 NL - ss 125
   - 🇳🇱 NL - ss 126
-  - 🇳🇱 NL - ss 127
-  - 🇳🇱 NL - ss 128
-  - 🇳🇱 NL - ss 129
+  - 🇳🇱 NL - vless 127
+  - 🇳🇱 NL - vless 128
+  - 🇳🇱 NL - vless 129
   - 🇳🇱 NL - ss 130
   - 🇳🇱 NL - ss 131
   - 🇳🇱 NL - ss 132
   - 🇳🇱 NL - ss 133
   - 🇳🇱 NL - ss 134
   - 🇳🇱 NL - ss 135
-  - 🇳🇱 NL - ss 136
-  - 🇳🇱 NL - ss 137
-  - 🇳🇱 NL - ss 138
-  - 🇳🇱 NL - ss 139
+  - 🇳🇱 NL - vless 136
+  - 🇳🇱 NL - vless 137
+  - 🇳🇱 NL - vless 138
+  - 🇳🇱 NL - vless 139
   - 🇳🇱 NL - ss 140
   - 🇳🇱 NL - ss 141
   - 🇳🇱 NL - ss 142
   - 🇳🇱 NL - ss 143
   - 🇳🇱 NL - ss 144
-  - 🇳🇱 NL - ss 145
-  - 🇳🇱 NL - ss 146
+  - 🇳🇱 NL - vless 145
+  - 🇳🇱 NL - vless 146
   - 🇳🇱 NL - ss 147
   - 🇳🇱 NL - ss 148
   - 🇳🇱 NL - ss 149
-  - 🇳🇱 NL - ss 150
-  - 🇳🇱 NL - ss 151
-  - 🇳🇱 NL - ss 152
-  - 🇳🇱 NL - ss 153
-  - 🇳🇱 NL - ss 154
-  - 🇳🇱 NL - ss 155
-  - 🇳🇱 NL - ss 156
-  - 🇳🇱 NL - ss 157
-  - 🇳🇱 NL - ss 158
+  - 🇳🇱 NL - vless 150
+  - 🇳🇱 NL - vless 151
+  - 🇳🇱 NL - vless 152
+  - 🇳🇱 NL - vless 153
+  - 🇳🇱 NL - vless 154
+  - 🇳🇱 NL - vless 155
+  - 🇳🇱 NL - vless 156
+  - 🇳🇱 NL - vless 157
+  - 🇳🇱 NL - hysteria2 158
   - 🇳🇱 NL - ss 159
   - 🇳🇱 NL - ss 160
   - 🇳🇱 NL - ss 161
-  - 🇳🇱 NL - ss 162
-  - 🇳🇱 NL - ss 163
-  - 🇳🇱 NL - ss 164
-  - 🇳🇱 NL - ss 165
-  - 🇳🇱 NL - ss 166
-  - 🇳🇱 NL - ss 167
-  - 🇳🇱 NL - ss 168
-  - 🇳🇱 NL - ss 169
+  - 🇳🇱 NL - vless 162
+  - 🇳🇱 NL - vless 163
+  - 🇳🇱 NL - vless 164
+  - 🇳🇱 NL - vless 165
+  - 🇳🇱 NL - vless 166
+  - 🇳🇱 NL - vless 167
+  - 🇳🇱 NL - vless 168
+  - 🇳🇱 NL - hysteria2 169
   - 🇳🇱 NL - ss 170
-  - 🇳🇱 NL - ss 171
-  - 🇳🇱 NL - ss 172
-  - 🇳🇱 NL - ss 173
-  - 🇳🇱 NL - ss 174
-  - 🇳🇱 NL - ss 175
-  - 🇳🇱 NL - ss 176
-  - 🇳🇱 NL - ss 177
+  - 🇳🇱 NL - vless 171
+  - 🇳🇱 NL - vless 172
+  - 🇳🇱 NL - vless 173
+  - 🇳🇱 NL - vless 174
+  - 🇳🇱 NL - vless 175
+  - 🇳🇱 NL - vless 176
+  - 🇳🇱 NL - hysteria2 177
   - 🇳🇱 NL - ss 178
   - 🇳🇱 NL - ss 179
   - 🇳🇱 NL - ss 180
@@ -2213,46 +2804,47 @@ proxy-groups:
   - 🇳🇱 NL - ss 182
   - 🇳🇱 NL - ss 183
   - 🇳🇱 NL - ss 184
-  - 🇳🇱 NL - ss 185
-  - 🇳🇱 NL - ss 186
-  - 🇳🇱 NL - ss 187
-  - 🇳🇱 NL - ss 188
-  - 🇳🇱 NL - ss 189
+  - 🇳🇱 NL - vless 185
+  - 🇳🇱 NL - vless 186
+  - 🇳🇱 NL - vless 187
+  - 🇳🇱 NL - vless 188
+  - 🇳🇱 NL - vless 189
   - 🇳🇱 NL - ss 190
   - 🇳🇱 NL - ss 191
   - 🇳🇱 NL - ss 192
   - 🇳🇱 NL - ss 193
   - 🇳🇱 NL - ss 194
-  - 🇳🇱 NL - ss 195
-  - 🇳🇱 NL - ss 196
-  - 🇳🇱 NL - ss 197
-  - 🇳🇱 NL - ss 198
-  - 🇳🇱 NL - ss 199
+  - 🇳🇱 NL - vless 195
+  - 🇳🇱 NL - vless 196
+  - 🇳🇱 NL - vless 197
+  - 🇳🇱 NL - vless 198
+  - 🇳🇱 NL - hysteria2 199
   - 🇳🇱 NL - ss 200
   - 🇳🇱 NL - ss 201
   - 🇳🇱 NL - ss 202
   - 🇳🇱 NL - ss 203
   - 🇳🇱 NL - ss 204
   - 🇳🇱 NL - ss 205
-  - 🇳🇱 NL - ss 206
-  - 🇳🇱 NL - ss 207
-  - 🇳🇱 NL - ss 208
-  - 🇳🇱 NL - ss 209
-  - 🇳🇱 NL - ss 210
-  - 🇳🇱 NL - trojan 211
-  - 🇳🇱 NL - trojan 212
+  - 🇳🇱 NL - vless 206
+  - 🇳🇱 NL - vless 207
+  - 🇳🇱 NL - vless 208
+  - 🇳🇱 NL - vless 209
+  - 🇳🇱 NL - vless 210
+  - 🇳🇱 NL - ss 211
+  - 🇳🇱 NL - ss 212
   - 🇳🇱 NL - trojan 213
   - 🇵🇱 PL - vless 214
   - 🇵🇱 PL - vless 215
   - 🇵🇱 PL - vless 216
-  - 🇵🇱 PL - ss 217
-  - 🇵🇱 PL - trojan 218
-  - 🇵🇱 PL - trojan 219
+  - 🇵🇱 PL - vless 217
+  - 🇵🇱 PL - vless 218
+  - 🇵🇱 PL - vless 219
   - 🇵🇱 PL - trojan 220
-  - 🇵🇱 PL - trojan 221
+  - 🇵🇱 PL - vless 221
   - 🇵🇱 PL - trojan 222
-  - 🇵🇱 PL - trojan 223
-  - 🇵🇱 PL - trojan 224
+  - 🇵🇱 PL - vless 223
+  - 🇵🇱 PL - vless 224
+  - 🇵🇱 PL - trojan 225
 rules:
 - GEOIP,LAN,DIRECT
 - MATCH,PROXIES
